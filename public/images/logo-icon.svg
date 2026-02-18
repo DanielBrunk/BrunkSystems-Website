@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 138">
-  <g transform="translate(5, 103) scale(0.1, -0.1)">
-    <path d="M46 0V116H138V584H46V700H334Q475 700 548.5 628.5Q622 557 622 416V284Q622 143 548.5 71.5Q475 0 334 0ZM270 120H336Q416 120 453.0 162.0Q490 204 490 280V420Q490 497 453.0 538.5Q416 580 336 580H270Z" fill="#1D6F6F"/>
-  </g>
-  <circle cx="42.5" cy="68.4" r="8.5" fill="#99C33B"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 48">
+  <text x="0" y="38" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-weight="700" font-size="42" fill="#1D6F6F">B</text>
+  <circle cx="30" cy="34" r="4" fill="#99C33B"/>
 </svg>
