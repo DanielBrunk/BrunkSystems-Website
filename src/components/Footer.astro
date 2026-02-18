@@ -1,0 +1,104 @@
+---
+import { siteConfig } from '../config';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__contact">
+      <p class="footer__company">{siteConfig.companyName}</p>
+      <address>
+        {siteConfig.address.street}<br />
+        {siteConfig.address.zip} {siteConfig.address.city}<br />
+        <a href={`tel:${siteConfig.phone}`}>{siteConfig.phoneDisplay}</a><br />
+        <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+      </address>
+    </div>
+
+    <div class="footer__hours">
+      <p class="footer__heading">Erreichbarkeit</p>
+      {siteConfig.openingHours.map((entry) => (
+        <p>{entry.days}: {entry.hours}</p>
+      ))}
+    </div>
+
+    <div class="footer__links">
+      <p class="footer__heading">Rechtliches</p>
+      <ul>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/datenschutz">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; {currentYear} {siteConfig.companyName}. Alle Rechte vorbehalten.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--color-text);
+    color: var(--color-text-inverse);
+    padding-top: var(--space-3xl);
+  }
+
+  .footer__inner {
+    display: grid;
+    gap: var(--space-2xl);
+  }
+
+  .footer__company {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer__heading {
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer address {
+    font-style: normal;
+    line-height: var(--line-height-base);
+  }
+
+  .footer a {
+    color: var(--color-text-inverse);
+    opacity: 0.85;
+    transition: opacity var(--transition-fast);
+  }
+
+  .footer a:hover {
+    opacity: 1;
+    color: var(--color-text-inverse);
+  }
+
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer li + li {
+    margin-top: var(--space-xs);
+  }
+
+  .footer__bottom {
+    margin-top: var(--space-2xl);
+    padding-block: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    font-size: var(--font-size-sm);
+    opacity: 0.7;
+  }
+
+  @media (min-width: 768px) {
+    .footer__inner {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+</style>

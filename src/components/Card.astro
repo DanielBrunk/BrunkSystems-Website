@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+  icon?: string;
+  href?: string;
+}
+
+const { title, icon, href } = Astro.props;
+const Tag = href ? 'a' : 'article';
+---
+
+<Tag class:list={['card', { 'card--link': href }]} href={href}>
+  {icon && <span class="card__icon" aria-hidden="true">{icon}</span>}
+  <h3 class="card__title">{title}</h3>
+  <div class="card__body">
+    <slot />
+  </div>
+  {href && <span class="card__arrow" aria-hidden="true">&rarr;</span>}
+</Tag>
+
+<style>
+  .card {
+    background-color: var(--color-background);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .card--link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .card--link:hover {
+    color: inherit;
+  }
+
+  .card--link:hover .card__arrow {
+    transform: translateX(4px);
+    color: var(--color-primary);
+  }
+
+  .card__icon {
+    font-size: var(--font-size-3xl);
+    display: block;
+    margin-bottom: var(--space-md);
+  }
+
+  .card__title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .card__body {
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+  }
+
+  .card__arrow {
+    display: inline-block;
+    margin-top: var(--space-md);
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    transition: transform var(--transition-fast), color var(--transition-fast);
+  }
+</style>

@@ -1,0 +1,417 @@
+---
+import Layout from '../components/Layout.astro';
+import { siteConfig } from '../config';
+---
+
+<Layout>
+  <section class="tiles">
+    <!-- 1. Webentwicklung (klickbar) -->
+    <a href="/leistungen/webentwicklung" class="tile">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+      </svg>
+      <h2 class="tile__title">Webentwicklung</h2>
+      <p class="tile__text">Moderne Websites und Webanwendungen. Schnell, sicher und auf den Punkt.</p>
+      <span class="tile__arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+    <!-- 2. Automatisierung (klickbar) -->
+    <a href="/leistungen/automatisierung" class="tile tile--alt">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 8V4H8" />
+        <rect width="16" height="12" x="4" y="8" rx="2" />
+        <path d="M2 14h2" />
+        <path d="M20 14h2" />
+        <path d="M15 13v2" />
+        <path d="M9 13v2" />
+      </svg>
+      <h2 class="tile__title">Automatisierung</h2>
+      <p class="tile__text">Geschäftsprozesse digitalisieren und automatisieren. Weniger Handarbeit, mehr Ergebnis.</p>
+      <span class="tile__arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+    <!-- 3. Philosophie (Primary) -->
+    <div class="tile tile--primary">
+      <blockquote class="tile__quote">
+        <p>Technik soll vereinfachen, nicht verkomplizieren.</p>
+        <cite>Daniel Brunk, BrunkSystems</cite>
+      </blockquote>
+      <ul class="tile__list">
+        <li>Verständliche Lösungen statt Buzzwords</li>
+        <li>Offene Standards und Transparenz</li>
+        <li>Langfristige Partnerschaften</li>
+        <li>Datenschutz als Grundprinzip</li>
+        <li>Faire, nachvollziehbare Preise</li>
+      </ul>
+    </div>
+
+    <!-- 4. IT-Beratung (klickbar) -->
+    <a href="/leistungen/it-beratung" class="tile">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 16v-4" />
+        <path d="M12 8h.01" />
+      </svg>
+      <h2 class="tile__title">IT-Beratung</h2>
+      <p class="tile__text">Strategische IT-Beratung für kleine Unternehmen. Ehrlich, verständlich, umsetzbar.</p>
+      <span class="tile__arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+    <!-- 5. Hosting & Betrieb (klickbar) -->
+    <a href="/leistungen/hosting" class="tile tile--alt">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+        <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+        <line x1="6" x2="6.01" y1="6" y2="6" />
+        <line x1="6" x2="6.01" y1="18" y2="18" />
+      </svg>
+      <h2 class="tile__title">Hosting &amp; Betrieb</h2>
+      <p class="tile__text">Zuverlässiges Hosting und Systembetreuung. Ihr Server, unsere Verantwortung.</p>
+      <span class="tile__arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+    <!-- 6. Datenmanagement (Secondary) -->
+    <div class="tile tile--secondary">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <ellipse cx="12" cy="5" rx="9" ry="3" />
+        <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+        <path d="M3 12A9 3 0 0 0 21 12" />
+      </svg>
+      <h2 class="tile__title">Datenmanagement</h2>
+      <p class="tile__text">Datenbanken, Schnittstellen und Dashboards — Ihre Daten, sinnvoll vernetzt.</p>
+      <dl class="tile__dl">
+        <dt>Datenbanken</dt>
+        <dd>PostgreSQL, Supabase, Ninox — die richtige Lösung für Ihre Anforderung.</dd>
+        <dt>Schnittstellen</dt>
+        <dd>APIs und Integrationen, die Ihre Systeme nahtlos verbinden.</dd>
+        <dt>Dashboards</dt>
+        <dd>Übersichtliche Auswertungen und Visualisierungen Ihrer Geschäftsdaten.</dd>
+      </dl>
+    </div>
+
+    <!-- 7. Über uns (alt) -->
+    <div class="tile tile--alt">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+      <h2 class="tile__title">Über uns</h2>
+      <p class="tile__text">
+        BrunkSystems ist die IT-Sparte von Daniel Brunk — Gärtnermeister und
+        Softwareentwickler am Bodensee. Die gleiche Sorgfalt, die in den Garten geht,
+        steckt auch in der Technik.
+      </p>
+      <p class="tile__text" style="margin-top: var(--space-md); opacity: 0.6; font-size: var(--font-size-sm);">
+        Schwesterfirma: <a href="https://brunk-garten.de" style="color: var(--color-primary);">Brunk Garten</a> — Garten- und Landschaftsbau
+      </p>
+    </div>
+
+    <!-- 8. Kontakt (Dark) -->
+    <div class="tile tile--dark tile--info" id="kontakt">
+      <p class="tile__company">{siteConfig.companyName}</p>
+      <address class="tile__address">
+        {siteConfig.address.street}<br />
+        {siteConfig.address.zip} {siteConfig.address.city}<br />
+        <a href={`tel:${siteConfig.phone}`}>{siteConfig.phoneDisplay}</a><br />
+        <a href="#" class="email" data-name="info" data-domain="brunksystems.de">
+          <span class="email__protected" aria-label="info at brunksystems.de">ed.smetsysknurb@ofni</span>
+        </a>
+      </address>
+
+      <div class="tile__hours">
+        <p class="tile__label">Erreichbarkeit</p>
+        {siteConfig.openingHours.map((entry) => (
+          <p>{entry.days}: {entry.hours}</p>
+        ))}
+      </div>
+
+      <nav class="tile__legal" aria-label="Rechtliches">
+        <p class="tile__label">Rechtliches</p>
+        <div class="tile__legal-links">
+          <a href="/impressum">Impressum</a>
+          <a href="/datenschutz">Datenschutz</a>
+        </div>
+      </nav>
+
+      <p class="tile__copyright">&copy; {new Date().getFullYear()} {siteConfig.companyName}</p>
+    </div>
+
+  </section>
+</Layout>
+
+<style>
+  /* ============================================
+     TILE GRID
+     ============================================ */
+  .tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    scroll-snap-type: y proximity;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh;
+    padding: var(--space-2xl) var(--space-3xl);
+    text-decoration: none;
+    color: var(--color-text);
+    background: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    scroll-snap-align: start;
+    transition: background-color var(--transition-base);
+  }
+
+  .tile:nth-child(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  /* Varianten */
+  .tile--alt {
+    background: var(--color-background-alt);
+  }
+
+  .tile--dark {
+    background: var(--color-text);
+    color: var(--color-text-inverse);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .tile--primary {
+    background: var(--color-primary);
+    color: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .tile--secondary {
+    background: var(--color-secondary);
+    color: var(--color-text);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* Hover auf klickbare Tiles */
+  a.tile:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-background));
+    color: var(--color-text);
+  }
+
+  a.tile.tile--alt:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-background-alt));
+  }
+
+  a.tile.tile--dark:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 15%, var(--color-text));
+    color: var(--color-text-inverse);
+  }
+
+  /* ============================================
+     TILE INHALTE
+     ============================================ */
+  .tile__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--space-lg);
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+  }
+
+  a.tile:hover .tile__icon {
+    opacity: 1;
+    color: var(--color-primary);
+  }
+
+  .tile__title {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-md);
+  }
+
+  .tile__text {
+    font-size: var(--font-size-md);
+    opacity: 0.75;
+    max-width: 40ch;
+  }
+
+  .tile__arrow {
+    margin-top: auto;
+    padding-top: var(--space-xl);
+    font-size: var(--font-size-2xl);
+    opacity: 0.4;
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
+  }
+
+  a.tile:hover .tile__arrow {
+    transform: translateX(8px);
+    opacity: 1;
+    color: var(--color-primary);
+  }
+
+  a.tile.tile--dark:hover .tile__arrow {
+    color: var(--color-primary);
+  }
+
+  /* Zitat */
+  .tile__quote {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .tile__quote p {
+    font-weight: 500;
+  }
+
+  .tile__quote cite {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-style: normal;
+    opacity: 0.7;
+    margin-top: var(--space-sm);
+  }
+
+  .tile__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tile__list li {
+    padding: var(--space-xs) 0;
+    font-weight: 500;
+  }
+
+  .tile__list li + li {
+    margin-top: 0;
+  }
+
+  /* Definition-Liste */
+  .tile__dl {
+    margin-top: var(--space-xl);
+  }
+
+  .tile__dl dt {
+    font-weight: 700;
+    margin-top: var(--space-md);
+  }
+
+  .tile__dl dt:first-child {
+    margin-top: 0;
+  }
+
+  .tile__dl dd {
+    margin: 0;
+    opacity: 0.8;
+    font-size: var(--font-size-sm);
+  }
+
+  /* Info-Kachel */
+  .tile--info {
+    justify-content: flex-start;
+    gap: 0;
+    font-size: var(--font-size-sm);
+  }
+
+  .tile__company {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+  }
+
+  .tile__address {
+    font-style: normal;
+    line-height: 1.8;
+  }
+
+  .tile__address a {
+    color: var(--color-text-inverse);
+    opacity: 0.8;
+    text-decoration: none;
+  }
+
+  .tile__address a:hover {
+    opacity: 1;
+    color: var(--color-primary);
+  }
+
+  .email__protected {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+
+  .tile__label {
+    font-weight: 600;
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.5;
+    margin-bottom: var(--space-xs);
+  }
+
+  .tile__hours {
+    margin-top: var(--space-xl);
+  }
+
+  .tile__hours p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .tile__legal {
+    margin-top: var(--space-xl);
+  }
+
+  .tile__legal-links {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .tile__legal-links a {
+    color: var(--color-text-inverse);
+    opacity: 0.7;
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+  }
+
+  .tile__legal-links a:hover {
+    opacity: 1;
+    color: var(--color-text-inverse);
+  }
+
+  .tile__copyright {
+    margin-top: auto;
+    padding-top: var(--space-lg);
+    font-size: var(--font-size-xs);
+    opacity: 0.3;
+  }
+
+  /* ============================================
+     MOBILE
+     ============================================ */
+  @media (max-width: 639px) {
+    .tiles {
+      grid-template-columns: 1fr;
+    }
+
+    .tile {
+      min-height: 45vh;
+      padding: var(--space-xl) var(--space-lg);
+      border-right: none;
+    }
+
+    .tile:nth-child(odd) {
+      border-right: none;
+    }
+
+    .tile__title {
+      font-size: var(--font-size-2xl);
+    }
+  }
+</style>

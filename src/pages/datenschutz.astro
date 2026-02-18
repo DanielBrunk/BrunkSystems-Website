@@ -1,0 +1,126 @@
+---
+import Layout from '../components/Layout.astro';
+import Section from '../components/Section.astro';
+import { siteConfig } from '../config';
+---
+
+<Layout title={`Datenschutz – ${siteConfig.companyName}`} description="Datenschutzerklärung gemäß DSGVO.">
+  <Section title="Datenschutzerklärung">
+    <div class="legal">
+
+      <h3>1. Datenschutz auf einen Blick</h3>
+      <p>
+        Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
+        personenbezogenen Daten passiert, wenn Sie diese Website besuchen.
+      </p>
+
+      <h3>2. Verantwortlicher</h3>
+      <p>
+        {siteConfig.companyName}<br />
+        {siteConfig.owner}<br />
+        {siteConfig.address.street}<br />
+        {siteConfig.address.zip} {siteConfig.address.city}<br />
+        Telefon: {siteConfig.phoneDisplay}<br />
+        E-Mail: {siteConfig.email}
+      </p>
+
+      <h3>3. Datenerfassung auf dieser Website</h3>
+
+      <h4>Hosting</h4>
+      <p>
+        Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die
+        personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den
+        Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen,
+        Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten,
+        Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden,
+        handeln.
+      </p>
+
+      <h4>Cookies</h4>
+      <p>
+        <strong>Diese Website verwendet keine Cookies.</strong> Es werden keine Tracking-Cookies,
+        Analyse-Cookies oder sonstige Cookies eingesetzt.
+      </p>
+
+      <h4>Webanalyse</h4>
+      <p>
+        Wir nutzen Umami als datenschutzfreundliche Webanalyse. Umami erfasst keine
+        personenbezogenen Daten, setzt keine Cookies und ist vollständig DSGVO-konform.
+        Es werden ausschließlich anonymisierte Zugriffsdaten erhoben (Seitenaufrufe,
+        Verweildauer, Referrer). Eine Zuordnung zu einzelnen Personen ist nicht möglich.
+      </p>
+
+      <h3>4. Allgemeine Hinweise und Pflichtinformationen</h3>
+
+      <h4>Datenschutz</h4>
+      <p>
+        Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst.
+        Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den
+        gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+      </p>
+
+      <h4>SSL-/TLS-Verschlüsselung</h4>
+      <p>
+        Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung
+        vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte
+        Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://"
+        auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+      </p>
+
+      <h3>5. Ihre Rechte</h3>
+      <p>Sie haben jederzeit das Recht:</p>
+      <ul>
+        <li>Auskunft über Ihre gespeicherten personenbezogenen Daten zu erhalten (Art. 15 DSGVO)</li>
+        <li>die Berichtigung unrichtiger Daten zu verlangen (Art. 16 DSGVO)</li>
+        <li>die Löschung Ihrer Daten zu verlangen (Art. 17 DSGVO)</li>
+        <li>die Einschränkung der Verarbeitung zu verlangen (Art. 18 DSGVO)</li>
+        <li>der Verarbeitung zu widersprechen (Art. 21 DSGVO)</li>
+        <li>Datenübertragbarkeit zu verlangen (Art. 20 DSGVO)</li>
+      </ul>
+      <p>
+        Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an
+        uns wenden.
+      </p>
+
+      <h3>6. Externe Links</h3>
+      <p>
+        Unsere Website enthält Links zu externen Websites. Wir haben keinen Einfluss
+        darauf, dass deren Betreiber die Datenschutzbestimmungen einhalten. Bitte informieren
+        Sie sich auf den jeweiligen Seiten über die dort geltenden Datenschutzbestimmungen.
+      </p>
+
+    </div>
+  </Section>
+</Layout>
+
+<style>
+  .legal {
+    max-width: var(--max-width-narrow);
+    margin-inline: auto;
+  }
+
+  .legal h3 {
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-sm);
+    font-size: var(--font-size-lg);
+  }
+
+  .legal h3:first-child {
+    margin-top: 0;
+  }
+
+  .legal h4 {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-xs);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+  }
+
+  .legal p + p {
+    margin-top: var(--space-md);
+  }
+
+  .legal ul {
+    margin-top: var(--space-sm);
+  }
+</style>

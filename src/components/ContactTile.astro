@@ -1,0 +1,49 @@
+---
+import { siteConfig } from '../config';
+---
+
+<div class="contact-tile">
+  <p class="contact-tile__company">{siteConfig.companyName}</p>
+  <address class="contact-tile__address">
+    {siteConfig.address.street}<br />
+    {siteConfig.address.zip} {siteConfig.address.city}<br />
+    <a href={`tel:${siteConfig.phone}`}>{siteConfig.phoneDisplay}</a><br />
+    <a href="#" class="email" data-name="info" data-domain="brunksystems.de">
+      <span class="email__protected" aria-label="info at brunksystems.de">ed.smetsysknurb@ofni</span>
+    </a>
+  </address>
+</div>
+
+<style>
+  .contact-tile {
+    display: contents;
+  }
+
+  .contact-tile__company {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+  }
+
+  .contact-tile__address {
+    font-style: normal;
+    line-height: 1.8;
+  }
+
+  .contact-tile__address a {
+    color: inherit;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+
+  .contact-tile__address a:hover {
+    opacity: 1;
+    color: var(--color-primary);
+  }
+
+  .email__protected {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+</style>

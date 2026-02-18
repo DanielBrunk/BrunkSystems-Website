@@ -1,0 +1,40 @@
+---
+import { siteConfig } from '../config';
+---
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="/" class="header__logo" aria-label={`${siteConfig.companyName} – Startseite`}>
+      <img src="/images/logo-primary.svg" alt={siteConfig.companyName} width="180" height="48" />
+    </a>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--space-md);
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .header__logo img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+  }
+</style>

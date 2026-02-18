@@ -1,0 +1,235 @@
+---
+import Layout from '../../components/Layout.astro';
+import ContactTile from '../../components/ContactTile.astro';
+---
+
+<Layout title="Hosting & Betrieb – BrunkSystems" description="Zuverlässiges Hosting und Systembetreuung. Coolify, Server, Monitoring, Updates.">
+  <section class="tiles">
+    <div class="tile tile--primary">
+      <a href="/" class="back">&larr; Startseite</a>
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+        <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+        <line x1="6" x2="6.01" y1="6" y2="6" />
+        <line x1="6" x2="6.01" y1="18" y2="18" />
+      </svg>
+      <h1>Hosting &amp; Betrieb</h1>
+      <p class="tile__subtitle">Zuverlässiges Hosting und Systembetreuung. Ihr Server, unsere Verantwortung.</p>
+    </div>
+
+    <div class="tile">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+        <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+        <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+        <line x1="12" x2="12.01" y1="20" y2="20" />
+      </svg>
+      <h2>Managed Hosting</h2>
+      <p>
+        Wir betreiben Ihre Websites und Anwendungen auf eigenen Servern
+        in europäischen Rechenzentren. Keine Shared-Hosting-Kompromisse,
+        volle Kontrolle, faire Preise.
+      </p>
+    </div>
+
+    <div class="tile tile--alt">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+        <path d="m9 12 2 2 4-4" />
+      </svg>
+      <h2>Coolify</h2>
+      <p>
+        Mit Coolify deployen wir Ihre Projekte per Git-Push automatisch.
+        Open Source, self-hosted, mit SSL-Zertifikaten und automatischen Backups.
+        Die Einfachheit von Netlify — auf Ihrem eigenen Server.
+      </p>
+    </div>
+
+    <div class="tile tile--secondary">
+      <h2>Was wir übernehmen</h2>
+      <ul class="tile__feature-list">
+        <li>Server-Setup und -Konfiguration</li>
+        <li>SSL-Zertifikate und Domain-Verwaltung</li>
+        <li>Automatische Backups</li>
+        <li>Sicherheitsupdates und Patches</li>
+        <li>Monitoring und Uptime-Überwachung</li>
+        <li>Notfall-Support bei Ausfällen</li>
+      </ul>
+    </div>
+
+    <div class="tile">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+        <path d="M3 3v5h5" />
+        <path d="M12 7v5l4 2" />
+      </svg>
+      <h2>Updates &amp; Wartung</h2>
+      <p>
+        Software veraltet. Sicherheitslücken entstehen. Wir halten Ihre
+        Systeme aktuell — regelmäßige Updates, Dependency-Checks und
+        proaktive Wartung, bevor Probleme entstehen.
+      </p>
+    </div>
+
+    <div class="tile tile--alt">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+        <line x1="12" x2="12" y1="9" y2="13" />
+        <line x1="12" x2="12.01" y1="17" y2="17" />
+      </svg>
+      <h2>Monitoring</h2>
+      <p>
+        Wir überwachen Ihre Server rund um die Uhr. Fällt etwas aus,
+        wissen wir es — oft bevor Sie es merken. Automatische Alerts,
+        schnelle Reaktion, transparente Kommunikation.
+      </p>
+    </div>
+
+    <div class="tile">
+      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+      </svg>
+      <h2>Sicherheit</h2>
+      <p>
+        Firewall-Konfiguration, SSH-Härtung, automatische Backups und
+        verschlüsselte Verbindungen — Sicherheit ist kein Add-on,
+        sondern Teil jedes Setups.
+      </p>
+    </div>
+
+    <div class="tile tile--dark">
+      <ContactTile />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh;
+    padding: var(--space-2xl) var(--space-3xl);
+    color: var(--color-text);
+    background: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .tile:nth-child(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  .tile--primary {
+    background: var(--color-primary);
+    color: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .tile--alt {
+    background: var(--color-background-alt);
+  }
+
+  .tile--secondary {
+    background: var(--color-secondary);
+    color: var(--color-text);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .tile--dark {
+    background: var(--color-text);
+    color: var(--color-text-inverse);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .tile__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--space-lg);
+    opacity: 0.7;
+  }
+
+  .tile h1 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-3xl);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-md);
+  }
+
+  .tile__subtitle {
+    font-size: var(--font-size-md);
+    opacity: 0.75;
+  }
+
+  .tile h2 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .tile p {
+    color: var(--color-text-light);
+    max-width: 45ch;
+  }
+
+  .tile--primary p,
+  .tile--primary .tile__subtitle {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .tile--dark p {
+    color: rgba(234, 239, 239, 0.75);
+  }
+
+  .tile__feature-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tile__feature-list li {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--color-text);
+  }
+
+  .tile__feature-list li:last-child {
+    border-bottom: none;
+  }
+
+  .back {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin-bottom: var(--space-xl);
+  }
+
+  .back:hover {
+    color: #FFFFFF;
+  }
+
+  @media (max-width: 639px) {
+    .tiles {
+      grid-template-columns: 1fr;
+    }
+
+    .tile {
+      min-height: 45vh;
+      padding: var(--space-xl) var(--space-lg);
+      border-right: none;
+    }
+
+    .tile:nth-child(odd) {
+      border-right: none;
+    }
+
+    .tile h1 {
+      font-size: var(--font-size-2xl);
+    }
+  }
+</style>

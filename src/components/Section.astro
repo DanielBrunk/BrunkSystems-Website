@@ -1,0 +1,33 @@
+---
+interface Props {
+  title?: string;
+  id?: string;
+  background?: 'default' | 'alt';
+}
+
+const { title, id, background = 'default' } = Astro.props;
+---
+
+<section class:list={['section', `section--${background}`]} id={id}>
+  <div class="container">
+    {title && <h2 class="section__title animate-on-scroll">{title}</h2>}
+    <div class="animate-on-scroll">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding-block: var(--space-section);
+  }
+
+  .section--alt {
+    background-color: var(--color-background-alt);
+  }
+
+  .section__title {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+  }
+</style>

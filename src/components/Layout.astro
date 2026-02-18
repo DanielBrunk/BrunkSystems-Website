@@ -1,0 +1,42 @@
+---
+import SEO from './SEO.astro';
+import Header from './Header.astro';
+import { siteConfig } from '../config';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+}
+
+const { title, description, image, noindex } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SEO title={title} description={description} image={image} noindex={noindex} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Font Preload -->
+    <link rel="preload" href="/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/SpaceGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Umami Analytics (cookie-free, DSGVO-konform) -->
+    {siteConfig.umamiWebsiteId && siteConfig.umamiScriptUrl && (
+      <script defer src={siteConfig.umamiScriptUrl} data-website-id={siteConfig.umamiWebsiteId} is:inline></script>
+    )}
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
