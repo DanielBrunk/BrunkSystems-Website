@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 48">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 48">
   <text x="0" y="36" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-weight="700" font-size="36" fill="#1D6F6F" letter-spacing="-1">BRUNK</text>
-  <text x="150" y="36" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-weight="400" font-size="36" fill="#1D6F6F" letter-spacing="-1">SYSTEMS</text>
-  <circle cx="380" cy="32" r="4" fill="#99C33B"/>
+  <circle cx="157" cy="33" r="6" fill="#99C33B"/>
+  <text x="170" y="36" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-weight="400" font-size="36" fill="#1D6F6F" letter-spacing="-1">SYSTEMS</text>
 </svg>
