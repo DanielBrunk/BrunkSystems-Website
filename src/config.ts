@@ -35,7 +35,7 @@ export const siteConfig = {
   // SEO Defaults
   defaultTitle: 'BrunkSystems – IT & Digitale Lösungen am Bodensee',
   defaultDescription:
-    'KI-Systeme, Automatisierung, SmartGarden und KI-Beratung aus Rielasingen-Worblingen am Bodensee. Wir lösen Probleme — mit der passenden Technologie.',
+    'KI-Systeme, Automatisierung, SmartGarden und KI-Beratung aus Rielasingen-Worblingen am Bodensee. Wir lösen Probleme - mit der passenden Technologie.',
   defaultImage: '/images/og-image.jpg',
 
   // Rechtliches (TODO: echte Daten eintragen)
