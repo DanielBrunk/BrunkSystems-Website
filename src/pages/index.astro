@@ -14,7 +14,7 @@ import { siteConfig } from '../config';
         <span class="nav__wordmark">BRUNK<span class="nav__dot">.</span>SYSTEMS</span>
       </a>
       <div class="nav__links">
-        <a href="#leistungen">Leistungen</a>
+        <a href="#bereiche">Bereiche</a>
         <a href="#prozess">Prozess</a>
         <a href="#ueber">Über uns</a>
         <a href="#kontakt" class="btn btn-primary btn-md">Kontakt</a>
@@ -27,7 +27,7 @@ import { siteConfig } from '../config';
     </div>
     <!-- Mobile Menu -->
     <div class="nav__mobile" aria-hidden="true">
-      <a href="#leistungen">Leistungen</a>
+      <a href="#bereiche">Bereiche</a>
       <a href="#prozess">Prozess</a>
       <a href="#ueber">Über uns</a>
       <a href="#kontakt">Kontakt</a>
@@ -44,19 +44,19 @@ import { siteConfig } from '../config';
     <div class="hero__content container">
       <div class="hero__badge">
         <span class="hero__badge-dot"></span>
-        IT & Digitale Lösungen am Bodensee
+        Bodensee · Konstanz · Singen · Rielasingen-Worblingen
       </div>
       <h1 class="hero__title">
-        Wir lösen Probleme.<br />
-        <span class="hero__title-accent">Mit System.</span>
+        KI verstehen.<br />
+        <span class="hero__title-accent">KI einsetzen.</span>
       </h1>
       <p class="hero__desc">
-        KI-Systeme, Automatisierung und smarte Technologie — individuell entwickelt,
-        verständlich erklärt, fair bepreist.
+        Beratung, Vorträge und ein klares Mindset für den Einsatz von
+        Künstlicher Intelligenz — verständlich, praxisnah und individuell.
       </p>
       <div class="hero__actions">
         <a href="#kontakt" class="btn btn-accent btn-xl">Projekt besprechen</a>
-        <a href="#leistungen" class="btn btn-ghost btn-xl">Was wir machen</a>
+        <a href="#bereiche" class="btn btn-ghost btn-xl">Unsere Bereiche</a>
       </div>
     </div>
   </section>
@@ -64,18 +64,63 @@ import { siteConfig } from '../config';
   <!-- ═══════════════════════════════════════════
        LEISTUNGEN
        ═══════════════════════════════════════════ -->
-  <section class="services" id="leistungen">
+  <section class="services" id="bereiche">
     <div class="container">
       <div class="fade-up">
-        <p class="section-label">Leistungen</p>
-        <h2 class="section-title">Vier Säulen.<br />Ein Ziel: Ihre Lösung.</h2>
+        <p class="section-label">Bereiche</p>
+        <h2 class="section-title">Vier Wege.<br />Ein Thema: KI.</h2>
         <p class="section-desc">
-          Sie kommen mit einem Problem. Ob KI, Automatisierung oder beides — das entscheiden wir gemeinsam.
+          Künstliche Intelligenz ist kein Feature — sie verändert, wie wir arbeiten, denken und entscheiden.
         </p>
       </div>
 
       <div class="services__grid">
         <div class="card fade-up" style="animation-delay: 0.1s">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a8 8 0 0 0-8 8c0 3.4 2.1 6.3 5 7.4V20a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.6c2.9-1.1 5-4 5-7.4a8 8 0 0 0-8-8z" />
+              <line x1="9" x2="15" y1="22" y2="22" />
+            </svg>
+          </div>
+          <h3 class="card__title">KI-Beratung</h3>
+          <p class="card__text">Persönliche Beratung für Unternehmen und Einzelpersonen. Wo macht KI Sinn? Wo nicht? Wir finden es gemeinsam heraus.</p>
+          <div class="card__tags">
+            <span class="tag tag--soft">1:1 Beratung</span>
+            <span class="tag tag--soft">Strategie</span>
+          </div>
+        </div>
+
+        <div class="card fade-up" style="animation-delay: 0.2s">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+            </svg>
+          </div>
+          <h3 class="card__title">Vorträge</h3>
+          <p class="card__text">KI greifbar machen — für Teams, Events und Konferenzen. Kein Hype, sondern Substanz mit klarer Sprache.</p>
+          <div class="card__tags">
+            <span class="tag tag--soft">Events</span>
+            <span class="tag tag--soft">Keynotes</span>
+          </div>
+        </div>
+
+        <div class="card fade-up" style="animation-delay: 0.3s">
+          <div class="card__icon card__icon--accent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+          </div>
+          <h3 class="card__title">KI-Mindset</h3>
+          <p class="card__text">Unser eigener Ansatz, wie KI in Unternehmen wirklich ankommt. Nicht die Technik entscheidet — sondern die Denkweise.</p>
+          <div class="card__tags">
+            <span class="tag tag--soft">Methodik</span>
+            <span class="tag tag--soft">Implementierung</span>
+          </div>
+        </div>
+
+        <div class="card fade-up" style="animation-delay: 0.4s">
           <div class="card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <rect width="18" height="10" x="3" y="11" rx="2" />
@@ -86,59 +131,10 @@ import { siteConfig } from '../config';
             </svg>
           </div>
           <h3 class="card__title">KI-Systeme</h3>
-          <p class="card__text">Individuelle Systeme mit KI als Kern. Nicht nachgerüstet — von Grund auf neu gedacht.</p>
+          <p class="card__text">Individuelle Systeme mit KI als Kern. Nicht nachgerüstet — von Grund auf neu gedacht und gebaut.</p>
           <div class="card__tags">
-            <span class="tag tag--soft">Machine Learning</span>
-            <span class="tag tag--soft">LLM-Integration</span>
-          </div>
-        </div>
-
-        <div class="card fade-up" style="animation-delay: 0.2s">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 8V4H8" />
-              <rect width="16" height="12" x="4" y="8" rx="2" />
-              <path d="M2 14h2" />
-              <path d="M20 14h2" />
-              <path d="M15 13v2" />
-              <path d="M9 13v2" />
-            </svg>
-          </div>
-          <h3 class="card__title">Automatisierung</h3>
-          <p class="card__text">Wiederkehrende Aufgaben eliminieren. Workflows, Schnittstellen und Datenverarbeitung.</p>
-          <div class="card__tags">
-            <span class="tag tag--soft">Workflows</span>
-            <span class="tag tag--soft">APIs</span>
-          </div>
-        </div>
-
-        <div class="card fade-up" style="animation-delay: 0.3s">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2a8 8 0 0 0-8 8c0 3.4 2.1 6.3 5 7.4V20a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.6c2.9-1.1 5-4 5-7.4a8 8 0 0 0-8-8z" />
-              <line x1="9" x2="15" y1="22" y2="22" />
-            </svg>
-          </div>
-          <h3 class="card__title">KI-Beratung</h3>
-          <p class="card__text">Vorträge, Workshops und persönliche Beratung. KI verstehen, einordnen und sinnvoll einsetzen.</p>
-          <div class="card__tags">
-            <span class="tag tag--soft">Workshops</span>
-            <span class="tag tag--soft">Vorträge</span>
-          </div>
-        </div>
-
-        <div class="card fade-up" style="animation-delay: 0.4s">
-          <div class="card__icon card__icon--accent">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-            </svg>
-          </div>
-          <h3 class="card__title">SmartGarden</h3>
-          <p class="card__text">Intelligente Gartenbewässerung. Sensoren, Daten und Automatisierung für Ihren Garten.</p>
-          <div class="card__tags">
-            <span class="tag tag--soft">IoT</span>
-            <span class="tag tag--soft">Sensorik</span>
+            <span class="tag tag--soft">Entwicklung</span>
+            <span class="tag tag--soft">Integration</span>
           </div>
         </div>
       </div>
@@ -185,24 +181,24 @@ import { siteConfig } from '../config';
         <div class="process__step fade-up" style="animation-delay: 0.1s">
           <div class="process__number">01</div>
           <div class="process__content">
-            <h3>Verstehen</h3>
-            <p>Wo drückt der Schuh? Was kostet Sie Zeit, Geld oder Nerven? Wir hören zu und analysieren Ihre Situation — ohne Buzzwords, ohne Vorurteile.</p>
+            <h3>Zuhören & Einordnen</h3>
+            <p>Wo stehen Sie mit KI? Was haben Sie schon probiert? Wir verstehen erst Ihre Situation, bevor wir über Lösungen sprechen.</p>
           </div>
         </div>
 
         <div class="process__step fade-up" style="animation-delay: 0.2s">
           <div class="process__number">02</div>
           <div class="process__content">
-            <h3>Lösung entwerfen</h3>
-            <p>Die passende Kombination aus KI, Automatisierung und Software. Wir zeigen Ihnen, was möglich ist — und was sinnvoll ist. Das ist nicht immer dasselbe.</p>
+            <h3>Mindset & Strategie</h3>
+            <p>KI-Einsatz beginnt im Kopf, nicht im Code. Wir entwickeln gemeinsam ein Verständnis dafür, was KI für Sie konkret bedeutet.</p>
           </div>
         </div>
 
         <div class="process__step fade-up" style="animation-delay: 0.3s">
           <div class="process__number">03</div>
           <div class="process__content">
-            <h3>Umsetzen & Begleiten</h3>
-            <p>Wir bauen das System, schulen Sie ein und bleiben Ansprechpartner. Keine Black Box — Sie verstehen, was läuft und warum.</p>
+            <h3>Umsetzen & Befähigen</h3>
+            <p>Ob Beratung, Vortrag oder KI-System — wir liefern nicht nur Ergebnisse, sondern Verständnis. Sie wissen danach, warum etwas funktioniert.</p>
           </div>
         </div>
       </div>
@@ -218,25 +214,25 @@ import { siteConfig } from '../config';
     <div class="container">
       <div class="philosophy__inner fade-up">
         <blockquote class="philosophy__quote">
-          <p>&bdquo;Sie kommen mit einem Problem. Wir liefern eine Lösung. Ob KI, Automatisierung oder beides — das ist zweitrangig.&ldquo;</p>
+          <p>&bdquo;KI ist nicht die Antwort auf alles. Aber wer sie versteht, stellt bessere Fragen.&ldquo;</p>
           <cite>Daniel Brunk, BrunkSystems</cite>
         </blockquote>
         <div class="philosophy__values">
           <div class="philosophy__value">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Wir denken in Systemen, nicht in Technologien</span>
+            <span>KI ist Werkzeug, kein Selbstzweck</span>
           </div>
           <div class="philosophy__value">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Verständliche Lösungen statt Buzzwords</span>
+            <span>Verständlichkeit vor Komplexität</span>
           </div>
           <div class="philosophy__value">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Offene Standards und Transparenz</span>
+            <span>Erst das Mindset, dann die Technik</span>
           </div>
           <div class="philosophy__value">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Faire, nachvollziehbare Preise</span>
+            <span>Ehrliche Einschätzung statt Hype</span>
           </div>
         </div>
       </div>
