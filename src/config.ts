@@ -20,7 +20,7 @@ export const siteConfig = {
   },
 
   // URLs
-  siteUrl: 'https://brunksystems.de',
+  siteUrl: 'https://brunk-systems.de',
 
   // Analytics (Umami)
   umamiWebsiteId: 'cd4d10d9-1d68-4784-8064-f3dc1859edca',
