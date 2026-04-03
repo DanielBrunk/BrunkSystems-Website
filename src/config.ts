@@ -23,8 +23,8 @@ export const siteConfig = {
   siteUrl: 'https://brunksystems.de',
 
   // Analytics (Umami)
-  umamiWebsiteId: '',
-  umamiScriptUrl: '',
+  umamiWebsiteId: 'cd4d10d9-1d68-4784-8064-f3dc1859edca',
+  umamiScriptUrl: 'https://analytics.brunksys.de/script.js',
 
   // SEO Defaults
   defaultTitle: 'BrunkSystems – IT & Digitale Lösungen am Bodensee',
