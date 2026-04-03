@@ -141,6 +141,13 @@ const { title, description, image, noindex } = Astro.props;
     z-index: 1000;
     padding-top: env(safe-area-inset-top, 0px);
     background: var(--darker);
+    transform: translate3d(0, 0, 0);
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+    transform: translate3d(0, 0, 0);
   }
 
   .nav__inner {
