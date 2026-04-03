@@ -4,21 +4,15 @@ export const siteConfig = {
   companySlogan: 'IT & Digitale Lösungen',
   owner: 'Daniel Brunk',
 
-  // Kontakt (TODO: echte Daten eintragen)
-  phone: '+49 XXX XXXXXXX',
-  phoneDisplay: '0XXX XXXXXXX',
+  // Kontakt
+  phone: '+4917699378390',
+  phoneDisplay: '0176 99378390',
   email: 'info@brunksystems.de',
   address: {
-    street: 'Musterstraße 1',
+    street: 'Gottlieb-Daimlerstraße 10',
     zip: '78239',
     city: 'Rielasingen-Worblingen',
   },
-
-  // Öffnungszeiten
-  openingHours: [
-    { days: 'Montag – Freitag', hours: '08:00 – 17:00' },
-    { days: 'Samstag – Sonntag', hours: 'geschlossen' },
-  ],
 
   // Social Media
   social: {
@@ -35,14 +29,12 @@ export const siteConfig = {
   // SEO Defaults
   defaultTitle: 'BrunkSystems – IT & Digitale Lösungen am Bodensee',
   defaultDescription:
-    'KI-Systeme, Automatisierung, SmartGarden und KI-Beratung aus Rielasingen-Worblingen am Bodensee. Wir lösen Probleme - mit der passenden Technologie.',
+    'KI-Beratung, Vorträge und KI-Systeme aus Rielasingen-Worblingen am Bodensee. KI verstehen, einsetzen und davon profitieren.',
   defaultImage: '/images/og-image.jpg',
 
-  // Rechtliches (TODO: echte Daten eintragen)
+  // Rechtliches
   legal: {
-    taxId: '',
-    tradeRegister: '',
-    supervisoryAuthority: '',
+    taxId: 'DE313423954',
   },
 };
 

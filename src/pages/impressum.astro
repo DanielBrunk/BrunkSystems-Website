@@ -1,12 +1,13 @@
 ---
 import Layout from '../components/Layout.astro';
-import Section from '../components/Section.astro';
 import { siteConfig } from '../config';
 ---
 
-<Layout title={`Impressum – ${siteConfig.companyName}`} description="Impressum und Angaben gemäß § 5 TMG.">
-  <Section title="Impressum">
-    <div class="legal">
+<Layout title={`Impressum - ${siteConfig.companyName}`} description="Impressum und Angaben gemäß § 5 TMG.">
+  <div class="legal-page">
+    <div class="container">
+      <h1>Impressum</h1>
+
       <h3>Angaben gemäß § 5 TMG</h3>
       <p>
         {siteConfig.companyName}<br />
@@ -24,14 +25,8 @@ import { siteConfig } from '../config';
       <h3>Umsatzsteuer-ID</h3>
       <p>
         Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
-        {siteConfig.legal.taxId}
+        {siteConfig.legal.taxId || 'wird nachgetragen'}
       </p>
-
-      <h3>Handelsregister</h3>
-      <p>{siteConfig.legal.tradeRegister}</p>
-
-      <h3>Aufsichtsbehörde</h3>
-      <p>{siteConfig.legal.supervisoryAuthority}</p>
 
       <h3>Streitschlichtung</h3>
       <p>
@@ -62,26 +57,37 @@ import { siteConfig } from '../config';
         der Seiten verantwortlich.
       </p>
     </div>
-  </Section>
+  </div>
 </Layout>
 
 <style>
-  .legal {
-    max-width: var(--max-width-narrow);
-    margin-inline: auto;
+  .legal-page {
+    padding-top: calc(80px + var(--space-2xl));
+    padding-bottom: var(--space-3xl);
+    background: var(--white);
   }
 
-  .legal h3 {
+  .legal-page h1 {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .legal-page h3 {
     margin-top: var(--space-xl);
     margin-bottom: var(--space-sm);
-    font-size: var(--font-size-lg);
+    font-size: 20px;
   }
 
-  .legal h3:first-child {
+  .legal-page h3:first-of-type {
     margin-top: 0;
   }
 
-  .legal p + p {
+  .legal-page p {
+    color: var(--dark);
+    opacity: 0.75;
+    line-height: 1.8;
+  }
+
+  .legal-page p + p {
     margin-top: var(--space-md);
   }
 </style>

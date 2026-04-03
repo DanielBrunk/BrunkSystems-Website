@@ -28,7 +28,301 @@ const { title, description, image, noindex } = Astro.props;
     )}
   </head>
   <body>
-    <slot />
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo" aria-label="BrunkSystems Startseite">
+          <span class="logo-h logo-h--sm">
+            <span class="logo-brunk">BRUNK</span>
+            <span class="logo-line"></span>
+            <span class="logo-sys">SYSTEMS</span>
+          </span>
+        </a>
+        <div class="nav__links">
+          <a href="/#bereiche">Bereiche</a>
+          <a href="/#prozess">Prozess</a>
+          <a href="/#ueber">Über uns</a>
+          <a href="/#kontakt" class="btn btn-primary btn-md">Kontakt</a>
+        </div>
+        <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="nav__mobile" aria-hidden="true">
+        <a href="/#bereiche">Bereiche</a>
+        <a href="/#prozess">Prozess</a>
+        <a href="/#ueber">Über uns</a>
+        <a href="/#kontakt">Kontakt</a>
+      </div>
+    </nav>
 
+    <main>
+      <slot />
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <span class="logo-k">
+              <span class="logo-k__bar"></span>
+              <span class="logo-k__text">
+                <span class="logo-brunk logo-brunk--footer">BRUNK</span>
+                <span class="logo-sys logo-sys--footer">SYSTEMS</span>
+              </span>
+            </span>
+          </div>
+          <div class="footer__links">
+            <a href="/impressum">Impressum</a>
+            <a href="/datenschutz">Datenschutz</a>
+          </div>
+          <p class="footer__copy">&copy; {new Date().getFullYear()} {siteConfig.companyName}</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Nav scroll effect
+      const nav = document.getElementById('nav');
+      if (nav) {
+        const hero = document.querySelector('.hero');
+        if (hero) {
+          const observer = new IntersectionObserver(
+            ([entry]) => nav.classList.toggle('scrolled', !entry.isIntersecting),
+            { threshold: 0.9 }
+          );
+          observer.observe(hero);
+        } else {
+          nav.classList.add('scrolled');
+        }
+      }
+
+      // Mobile menu toggle
+      const toggle = document.querySelector('.nav__toggle');
+      const mobile = document.querySelector('.nav__mobile');
+      toggle?.addEventListener('click', () => {
+        const isOpen = mobile?.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        mobile?.setAttribute('aria-hidden', String(!isOpen));
+      });
+      mobile?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobile?.classList.remove('open');
+          toggle?.setAttribute('aria-expanded', 'false');
+          mobile?.setAttribute('aria-hidden', 'true');
+        });
+      });
+
+      // Email obfuscation
+      document.querySelectorAll('.email').forEach(el => {
+        const name = el.getAttribute('data-name');
+        const domain = el.getAttribute('data-domain');
+        if (name && domain) {
+          el.setAttribute('href', `mailto:${name}@${domain}`);
+        }
+      });
+    </script>
   </body>
 </html>
+
+<style is:global>
+  /* ═══ NAV ═══ */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: var(--space-md) 0;
+    transition: all 0.4s var(--ease);
+  }
+
+  .nav.scrolled {
+    background: rgba(26, 46, 38, 0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: var(--space-sm) 0;
+  }
+
+  .nav__inner {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+    color: white;
+  }
+
+  .logo-h { display: flex; align-items: stretch; }
+  .logo-h--sm { height: 24px; }
+
+  .logo-brunk {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--light);
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+  }
+
+  .logo-line {
+    width: 2px;
+    background: var(--accent);
+    margin: 0 10px;
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+
+  .logo-sys {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--light);
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .nav__links a:not(.btn) {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s var(--ease);
+    text-decoration: none;
+  }
+
+  .nav__links a:not(.btn):hover { color: white; }
+
+  .nav__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-sm);
+  }
+
+  .nav__toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s var(--ease);
+  }
+
+  .nav__mobile {
+    display: none;
+    flex-direction: column;
+    padding: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .nav__mobile a {
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: var(--space-sm) 0;
+  }
+
+  .nav__mobile a:hover { color: white; }
+  .nav__mobile.open { display: flex; }
+
+  /* ═══ FOOTER ═══ */
+  .footer {
+    padding: var(--space-xl) 0;
+    background: var(--darker);
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .footer__brand { display: flex; align-items: center; gap: var(--space-sm); }
+
+  .logo-k { display: flex; align-items: stretch; }
+
+  .logo-k__bar {
+    width: 2px;
+    background: var(--accent);
+    border-radius: 1px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+
+  .logo-k__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo-brunk--footer {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1;
+  }
+
+  .logo-sys--footer {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-top: 1px;
+  }
+
+  .footer__links {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .footer__links a {
+    color: rgba(255,255,255,0.4);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.3s var(--ease);
+  }
+
+  .footer__links a:hover { color: rgba(255,255,255,0.8); }
+
+  .footer__copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.2);
+  }
+
+  /* ═══ RESPONSIVE NAV/FOOTER ═══ */
+  @media (max-width: 768px) {
+    .nav__links { display: none; }
+    .nav__toggle { display: flex; }
+    .footer__inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

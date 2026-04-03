@@ -1,12 +1,12 @@
 ---
 import Layout from '../components/Layout.astro';
-import Section from '../components/Section.astro';
 import { siteConfig } from '../config';
 ---
 
-<Layout title={`Datenschutz – ${siteConfig.companyName}`} description="Datenschutzerklärung gemäß DSGVO.">
-  <Section title="Datenschutzerklärung">
-    <div class="legal">
+<Layout title={`Datenschutz - ${siteConfig.companyName}`} description="Datenschutzerklärung gemäß DSGVO.">
+  <div class="legal-page">
+    <div class="container">
+      <h1>Datenschutzerklärung</h1>
 
       <h3>1. Datenschutz auf einen Blick</h3>
       <p>
@@ -63,8 +63,8 @@ import { siteConfig } from '../config';
       <p>
         Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung
         vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte
-        Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://"
-        auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+        Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://"
+        auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
       </p>
 
       <h3>5. Ihre Rechte</h3>
@@ -88,39 +88,57 @@ import { siteConfig } from '../config';
         darauf, dass deren Betreiber die Datenschutzbestimmungen einhalten. Bitte informieren
         Sie sich auf den jeweiligen Seiten über die dort geltenden Datenschutzbestimmungen.
       </p>
-
     </div>
-  </Section>
+  </div>
 </Layout>
 
 <style>
-  .legal {
-    max-width: var(--max-width-narrow);
-    margin-inline: auto;
+  .legal-page {
+    padding-top: calc(80px + var(--space-2xl));
+    padding-bottom: var(--space-3xl);
+    background: var(--white);
   }
 
-  .legal h3 {
-    margin-top: var(--space-2xl);
+  .legal-page h1 {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .legal-page h3 {
+    margin-top: var(--space-xl);
     margin-bottom: var(--space-sm);
-    font-size: var(--font-size-lg);
+    font-size: 20px;
   }
 
-  .legal h3:first-child {
+  .legal-page h3:first-of-type {
     margin-top: 0;
   }
 
-  .legal h4 {
+  .legal-page h4 {
     margin-top: var(--space-lg);
     margin-bottom: var(--space-xs);
-    font-size: var(--font-size-base);
+    font-size: 16px;
     font-weight: 600;
   }
 
-  .legal p + p {
+  .legal-page p {
+    color: var(--dark);
+    opacity: 0.75;
+    line-height: 1.8;
+  }
+
+  .legal-page p + p {
     margin-top: var(--space-md);
   }
 
-  .legal ul {
+  .legal-page ul {
     margin-top: var(--space-sm);
+    padding-left: var(--space-lg);
+    list-style: disc;
+  }
+
+  .legal-page li {
+    color: var(--dark);
+    opacity: 0.75;
+    line-height: 1.8;
   }
 </style>
