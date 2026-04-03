@@ -139,22 +139,17 @@ const { title, description, image, noindex } = Astro.props;
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: var(--space-md) 0;
-    padding-top: calc(var(--space-md) + env(safe-area-inset-top, 0px));
-    padding-left: env(safe-area-inset-left, 0px);
-    padding-right: env(safe-area-inset-right, 0px);
+    padding: calc(var(--space-md) + env(safe-area-inset-top, 0px)) env(safe-area-inset-right, 0px) var(--space-md) env(safe-area-inset-left, 0px);
     transition: all 0.4s var(--ease);
     background: var(--darker);
+    transform: translateZ(0);
   }
 
   .nav.scrolled {
     background: rgba(26, 46, 38, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255,255,255,0.06);
-    padding: var(--space-sm) 0;
-    padding-top: calc(var(--space-sm) + env(safe-area-inset-top, 0px));
-    padding-left: env(safe-area-inset-left, 0px);
-    padding-right: env(safe-area-inset-right, 0px);
+    padding: calc(var(--space-sm) + env(safe-area-inset-top, 0px)) env(safe-area-inset-right, 0px) var(--space-sm) env(safe-area-inset-left, 0px);
   }
 
   .nav__inner {
