@@ -1,6 +1,5 @@
 ---
 import SEO from './SEO.astro';
-import Header from './Header.astro';
 import { siteConfig } from '../config';
 import '../styles/global.css';
 
@@ -21,22 +20,28 @@ const { title, description, image, noindex } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <SEO title={title} description={description} image={image} noindex={noindex} />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!-- Font Preload -->
     <link rel="preload" href="/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/SpaceGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin />
 
-    <!-- Umami Analytics (cookie-free, DSGVO-konform) -->
     {siteConfig.umamiWebsiteId && siteConfig.umamiScriptUrl && (
       <script defer src={siteConfig.umamiScriptUrl} data-website-id={siteConfig.umamiWebsiteId} is:inline></script>
     )}
   </head>
   <body>
-    <Header />
-    <main>
-      <slot />
-    </main>
+    <slot />
+
+    <script>
+      // Intersection Observer for fade-up animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
   </body>
 </html>

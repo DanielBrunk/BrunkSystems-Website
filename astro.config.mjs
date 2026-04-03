@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://brunk-garten.de',
+  site: 'https://brunksystems.de',
   output: 'static',
   integrations: [sitemap()],
   build: {

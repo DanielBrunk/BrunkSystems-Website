@@ -4,320 +4,1065 @@ import { siteConfig } from '../config';
 ---
 
 <Layout>
-  <section class="tiles">
-    <!-- 1. SmartGarden (klickbar) -->
-    <a href="/leistungen/smartgarden" class="tile">
-      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-      </svg>
-      <h2 class="tile__title">SmartGarden</h2>
-      <p class="tile__text">Intelligente Gartenbewässerung. Sensoren, Daten und Automatisierung für Ihren Garten.</p>
-      <span class="tile__arrow" aria-hidden="true">&rarr;</span>
-    </a>
-
-    <!-- 2. KI-Beratung (klickbar) -->
-    <a href="/leistungen/ki-beratung" class="tile tile--alt">
-      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 2a8 8 0 0 0-8 8c0 3.4 2.1 6.3 5 7.4V20a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.6c2.9-1.1 5-4 5-7.4a8 8 0 0 0-8-8z" />
-        <line x1="9" x2="15" y1="22" y2="22" />
-      </svg>
-      <h2 class="tile__title">KI-Beratung</h2>
-      <p class="tile__text">Vorträge, Workshops und persönliche Beratung. KI verstehen, einordnen und sinnvoll einsetzen.</p>
-      <span class="tile__arrow" aria-hidden="true">&rarr;</span>
-    </a>
-
-    <!-- 3. Philosophie (Primary) -->
-    <div class="tile tile--primary">
-      <blockquote class="tile__quote">
-        <p>Sie kommen mit einem Problem. Wir liefern eine Lösung. Ob KI, Automatisierung oder beides - das ist zweitrangig.</p>
-        <cite>Daniel Brunk, BrunkSystems</cite>
-      </blockquote>
-      <ul class="tile__list">
-        <li>Wir denken in Systemen, nicht in Technologien</li>
-        <li>Verständliche Lösungen statt Buzzwords</li>
-        <li>Offene Standards und Transparenz</li>
-        <li>Faire, nachvollziehbare Preise</li>
-      </ul>
+  <!-- ═══════════════════════════════════════════
+       NAV
+       ═══════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="BrunkSystems Startseite">
+        <img src="/images/logo-icon.svg" alt="" width="32" height="32" />
+        <span class="nav__wordmark">BRUNK<span class="nav__dot">.</span>SYSTEMS</span>
+      </a>
+      <div class="nav__links">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#prozess">Prozess</a>
+        <a href="#ueber">Über uns</a>
+        <a href="#kontakt" class="btn btn-primary btn-md">Kontakt</a>
+      </div>
+      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-
-    <!-- 4. KI-Systeme (klickbar) -->
-    <a href="/leistungen/ki-systeme" class="tile">
-      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect width="18" height="10" x="3" y="11" rx="2" />
-        <circle cx="12" cy="5" r="2" />
-        <path d="M12 7v4" />
-        <line x1="8" x2="8" y1="16" y2="16" />
-        <line x1="16" x2="16" y1="16" y2="16" />
-      </svg>
-      <h2 class="tile__title">KI-Systeme</h2>
-      <p class="tile__text">Individuelle Systeme mit KI als Kern. Nicht nachgerüstet - von Grund auf neu gedacht.</p>
-      <span class="tile__arrow" aria-hidden="true">&rarr;</span>
-    </a>
-
-    <!-- 5. Automatisierung (klickbar) -->
-    <a href="/leistungen/automatisierung" class="tile tile--alt">
-      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 8V4H8" />
-        <rect width="16" height="12" x="4" y="8" rx="2" />
-        <path d="M2 14h2" />
-        <path d="M20 14h2" />
-        <path d="M15 13v2" />
-        <path d="M9 13v2" />
-      </svg>
-      <h2 class="tile__title">Automatisierung</h2>
-      <p class="tile__text">Wiederkehrende Aufgaben eliminieren. Workflows, Schnittstellen und Datenverarbeitung.</p>
-      <span class="tile__arrow" aria-hidden="true">&rarr;</span>
-    </a>
-
-    <!-- 6. Wie wir arbeiten (Secondary) -->
-    <div class="tile tile--secondary">
-      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 16v-4" />
-        <path d="M12 8h.01" />
-      </svg>
-      <h2 class="tile__title">Wie wir arbeiten</h2>
-      <p class="tile__text">Ihr Problem ist der Ausgangspunkt. Wir analysieren, beraten und setzen um - alles aus einer Hand.</p>
-      <dl class="tile__dl">
-        <dt>Verstehen</dt>
-        <dd>Wo drückt der Schuh? Was kostet Sie Zeit, Geld oder Nerven?</dd>
-        <dt>Lösung entwerfen</dt>
-        <dd>Die passende Kombination aus KI, Automatisierung und Software.</dd>
-        <dt>Umsetzen &amp; Begleiten</dt>
-        <dd>Wir bauen das System, schulen Sie ein und bleiben Ansprechpartner.</dd>
-      </dl>
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" aria-hidden="true">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#prozess">Prozess</a>
+      <a href="#ueber">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
     </div>
+  </nav>
 
-    <!-- 7. Über uns (alt) -->
-    <div class="tile tile--alt">
-      <svg class="tile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-      <h2 class="tile__title">Über uns</h2>
-      <p class="tile__text">
-        BrunkSystems ist die Digitalsparte von Daniel Brunk - Gärtnermeister und
-        Entwickler am Bodensee. Was als interne Digitalisierung im eigenen
-        GaLaBau-Betrieb begann, ist heute Dienstleistung für andere Unternehmen.
+  <!-- ═══════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__grid-pattern"></div>
+    <div class="hero__content container">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        IT & Digitale Lösungen am Bodensee
+      </div>
+      <h1 class="hero__title">
+        Wir lösen Probleme.<br />
+        <span class="hero__title-accent">Mit System.</span>
+      </h1>
+      <p class="hero__desc">
+        KI-Systeme, Automatisierung und smarte Technologie — individuell entwickelt,
+        verständlich erklärt, fair bepreist.
       </p>
-      <p class="tile__text" style="margin-top: var(--space-md); opacity: 0.6; font-size: var(--font-size-sm);">
-        Schwesterfirma: <a href="https://brunk-garten.de" style="color: var(--color-primary);">Brunk Garten</a> - Garten- und Landschaftsbau
-      </p>
+      <div class="hero__actions">
+        <a href="#kontakt" class="btn btn-accent btn-xl">Projekt besprechen</a>
+        <a href="#leistungen" class="btn btn-ghost btn-xl">Was wir machen</a>
+      </div>
     </div>
+  </section>
 
-    <!-- 8. Kontakt (Dark) -->
-    <div class="tile tile--dark tile--info" id="kontakt">
-      <p class="tile__company">{siteConfig.companyName}</p>
-      <address class="tile__address">
-        {siteConfig.address.street}<br />
-        {siteConfig.address.zip} {siteConfig.address.city}<br />
-        <a href={`tel:${siteConfig.phone}`}>{siteConfig.phoneDisplay}</a><br />
-        <a href="#" class="email" data-name="info" data-domain="brunksystems.de">
-          <span class="email__protected" aria-label="info at brunksystems.de">ed.smetsysknurb@ofni</span>
-        </a>
-      </address>
-
-      <div class="tile__hours">
-        <p class="tile__label">Erreichbarkeit</p>
-        {siteConfig.openingHours.map((entry) => (
-          <p>{entry.days}: {entry.hours}</p>
-        ))}
+  <!-- ═══════════════════════════════════════════
+       LEISTUNGEN
+       ═══════════════════════════════════════════ -->
+  <section class="services" id="leistungen">
+    <div class="container">
+      <div class="fade-up">
+        <p class="section-label">Leistungen</p>
+        <h2 class="section-title">Vier Säulen.<br />Ein Ziel: Ihre Lösung.</h2>
+        <p class="section-desc">
+          Sie kommen mit einem Problem. Ob KI, Automatisierung oder beides — das entscheiden wir gemeinsam.
+        </p>
       </div>
 
-      <nav class="tile__legal" aria-label="Rechtliches">
-        <p class="tile__label">Rechtliches</p>
-        <div class="tile__legal-links">
+      <div class="services__grid">
+        <div class="card fade-up" style="animation-delay: 0.1s">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="10" x="3" y="11" rx="2" />
+              <circle cx="12" cy="5" r="2" />
+              <path d="M12 7v4" />
+              <line x1="8" x2="8" y1="16" y2="16" />
+              <line x1="16" x2="16" y1="16" y2="16" />
+            </svg>
+          </div>
+          <h3 class="card__title">KI-Systeme</h3>
+          <p class="card__text">Individuelle Systeme mit KI als Kern. Nicht nachgerüstet — von Grund auf neu gedacht.</p>
+          <div class="card__tags">
+            <span class="tag tag--soft">Machine Learning</span>
+            <span class="tag tag--soft">LLM-Integration</span>
+          </div>
+        </div>
+
+        <div class="card fade-up" style="animation-delay: 0.2s">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 8V4H8" />
+              <rect width="16" height="12" x="4" y="8" rx="2" />
+              <path d="M2 14h2" />
+              <path d="M20 14h2" />
+              <path d="M15 13v2" />
+              <path d="M9 13v2" />
+            </svg>
+          </div>
+          <h3 class="card__title">Automatisierung</h3>
+          <p class="card__text">Wiederkehrende Aufgaben eliminieren. Workflows, Schnittstellen und Datenverarbeitung.</p>
+          <div class="card__tags">
+            <span class="tag tag--soft">Workflows</span>
+            <span class="tag tag--soft">APIs</span>
+          </div>
+        </div>
+
+        <div class="card fade-up" style="animation-delay: 0.3s">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a8 8 0 0 0-8 8c0 3.4 2.1 6.3 5 7.4V20a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.6c2.9-1.1 5-4 5-7.4a8 8 0 0 0-8-8z" />
+              <line x1="9" x2="15" y1="22" y2="22" />
+            </svg>
+          </div>
+          <h3 class="card__title">KI-Beratung</h3>
+          <p class="card__text">Vorträge, Workshops und persönliche Beratung. KI verstehen, einordnen und sinnvoll einsetzen.</p>
+          <div class="card__tags">
+            <span class="tag tag--soft">Workshops</span>
+            <span class="tag tag--soft">Vorträge</span>
+          </div>
+        </div>
+
+        <div class="card fade-up" style="animation-delay: 0.4s">
+          <div class="card__icon card__icon--accent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+            </svg>
+          </div>
+          <h3 class="card__title">SmartGarden</h3>
+          <p class="card__text">Intelligente Gartenbewässerung. Sensoren, Daten und Automatisierung für Ihren Garten.</p>
+          <div class="card__tags">
+            <span class="tag tag--soft">IoT</span>
+            <span class="tag tag--soft">Sensorik</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       STATS
+       ═══════════════════════════════════════════ -->
+  <section class="stats">
+    <div class="stats__orb stats__orb--1"></div>
+    <div class="stats__orb stats__orb--2"></div>
+    <div class="container">
+      <div class="stats__grid fade-up">
+        <div class="stats__item">
+          <span class="stats__number">4</span>
+          <span class="stats__label">Leistungsbereiche</span>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item">
+          <span class="stats__number">100%</span>
+          <span class="stats__label">Individuelle Lösungen</span>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item">
+          <span class="stats__number">Bodensee</span>
+          <span class="stats__label">Region & Remote</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROZESS
+       ═══════════════════════════════════════════ -->
+  <section class="process" id="prozess">
+    <div class="container">
+      <div class="fade-up">
+        <p class="section-label">Wie wir arbeiten</p>
+        <h2 class="section-title">Vom Problem<br />zur Lösung.</h2>
+      </div>
+
+      <div class="process__steps">
+        <div class="process__step fade-up" style="animation-delay: 0.1s">
+          <div class="process__number">01</div>
+          <div class="process__content">
+            <h3>Verstehen</h3>
+            <p>Wo drückt der Schuh? Was kostet Sie Zeit, Geld oder Nerven? Wir hören zu und analysieren Ihre Situation — ohne Buzzwords, ohne Vorurteile.</p>
+          </div>
+        </div>
+
+        <div class="process__step fade-up" style="animation-delay: 0.2s">
+          <div class="process__number">02</div>
+          <div class="process__content">
+            <h3>Lösung entwerfen</h3>
+            <p>Die passende Kombination aus KI, Automatisierung und Software. Wir zeigen Ihnen, was möglich ist — und was sinnvoll ist. Das ist nicht immer dasselbe.</p>
+          </div>
+        </div>
+
+        <div class="process__step fade-up" style="animation-delay: 0.3s">
+          <div class="process__number">03</div>
+          <div class="process__content">
+            <h3>Umsetzen & Begleiten</h3>
+            <p>Wir bauen das System, schulen Sie ein und bleiben Ansprechpartner. Keine Black Box — Sie verstehen, was läuft und warum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PHILOSOPHIE
+       ═══════════════════════════════════════════ -->
+  <section class="philosophy">
+    <div class="philosophy__orb philosophy__orb--1"></div>
+    <div class="philosophy__orb philosophy__orb--2"></div>
+    <div class="container">
+      <div class="philosophy__inner fade-up">
+        <blockquote class="philosophy__quote">
+          <p>&bdquo;Sie kommen mit einem Problem. Wir liefern eine Lösung. Ob KI, Automatisierung oder beides — das ist zweitrangig.&ldquo;</p>
+          <cite>Daniel Brunk, BrunkSystems</cite>
+        </blockquote>
+        <div class="philosophy__values">
+          <div class="philosophy__value">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Wir denken in Systemen, nicht in Technologien</span>
+          </div>
+          <div class="philosophy__value">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Verständliche Lösungen statt Buzzwords</span>
+          </div>
+          <div class="philosophy__value">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Offene Standards und Transparenz</span>
+          </div>
+          <div class="philosophy__value">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Faire, nachvollziehbare Preise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ÜBER UNS
+       ═══════════════════════════════════════════ -->
+  <section class="about" id="ueber">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__text fade-up">
+          <p class="section-label">Über uns</p>
+          <h2 class="section-title">Gärtnermeister<br />trifft Entwickler.</h2>
+          <p class="about__desc">
+            BrunkSystems ist die Digitalsparte von Daniel Brunk — Gärtnermeister und
+            Entwickler am Bodensee. Was als interne Digitalisierung im eigenen
+            GaLaBau-Betrieb begann, ist heute Dienstleistung für andere Unternehmen.
+          </p>
+          <p class="about__desc">
+            Wir wissen, wie Handwerk tickt. Und wir wissen, was Technologie kann.
+            Diese Kombination macht den Unterschied.
+          </p>
+          <div class="about__link">
+            <span class="about__link-label">Schwesterfirma</span>
+            <a href="https://brunk-garten.de" target="_blank" rel="noopener" class="btn btn-outline btn-md">
+              Brunk Garten &rarr;
+            </a>
+          </div>
+        </div>
+        <div class="about__visual fade-up" style="animation-delay: 0.2s">
+          <div class="about__card about__card--1">
+            <span class="about__card-label">Standort</span>
+            <span class="about__card-value">Bodensee</span>
+          </div>
+          <div class="about__card about__card--2">
+            <span class="about__card-label">Hintergrund</span>
+            <span class="about__card-value">GaLaBau + Tech</span>
+          </div>
+          <div class="about__card about__card--3">
+            <span class="about__card-label">Philosophie</span>
+            <span class="about__card-value">Problem first</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       KONTAKT CTA
+       ═══════════════════════════════════════════ -->
+  <section class="cta" id="kontakt">
+    <div class="cta__orb cta__orb--1"></div>
+    <div class="cta__orb cta__orb--2"></div>
+    <div class="container">
+      <div class="cta__inner fade-up">
+        <p class="section-label" style="color: var(--accent)">Kontakt</p>
+        <h2 class="cta__title">Lassen Sie uns über<br />Ihr Projekt sprechen.</h2>
+        <p class="cta__desc">
+          Kein Verkaufsgespräch. Kein Kleingedrucktes. Einfach ein Gespräch darüber,
+          was Sie brauchen und wie wir helfen können.
+        </p>
+        <div class="cta__contact">
+          <div class="cta__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="#" class="email" data-name="info" data-domain="brunksystems.de">
+              <span class="email__protected" aria-label="info at brunksystems.de">ed.smetsysknurb@ofni</span>
+            </a>
+          </div>
+          <div class="cta__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>{siteConfig.address.zip} {siteConfig.address.city}</span>
+          </div>
+        </div>
+        <a href={`mailto:${siteConfig.email}`} class="btn btn-accent btn-xl">
+          E-Mail schreiben
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="/images/logo-icon.svg" alt="" width="28" height="28" />
+          <span class="footer__wordmark">BRUNK<span class="footer__dot">.</span>SYSTEMS</span>
+        </div>
+        <div class="footer__links">
           <a href="/impressum">Impressum</a>
           <a href="/datenschutz">Datenschutz</a>
         </div>
-      </nav>
-
-      <p class="tile__copyright">&copy; {new Date().getFullYear()} {siteConfig.companyName}</p>
+        <p class="footer__copy">&copy; {new Date().getFullYear()} {siteConfig.companyName}</p>
+      </div>
     </div>
-
-  </section>
+  </footer>
 </Layout>
 
 <style>
-  .tiles {
+  /* ═══════════════════════════════════════════
+     NAV
+     ═══════════════════════════════════════════ */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: var(--space-md) 0;
+    transition: all 0.4s var(--ease);
+  }
+
+  .nav.scrolled {
+    background: rgba(26, 46, 38, 0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: var(--space-sm) 0;
+  }
+
+  .nav__inner {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav__wordmark {
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+
+  .nav__dot {
+    color: var(--accent);
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .nav__links a:not(.btn) {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s var(--ease);
+    text-decoration: none;
+  }
+
+  .nav__links a:not(.btn):hover {
+    color: white;
+  }
+
+  .nav__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-sm);
+  }
+
+  .nav__toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s var(--ease);
+  }
+
+  .nav__mobile {
+    display: none;
+    flex-direction: column;
+    padding: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .nav__mobile a {
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: var(--space-sm) 0;
+  }
+
+  .nav__mobile a:hover {
+    color: white;
+  }
+
+  /* ═══════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--darker);
+    overflow: hidden;
+    padding: var(--space-3xl) 0;
+  }
+
+  .hero__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 12s ease-in-out infinite;
+  }
+
+  .hero__orb--1 {
+    width: 500px;
+    height: 400px;
+    bottom: -100px;
+    left: -100px;
+    background: rgba(29,111,111,0.4);
+  }
+
+  .hero__orb--2 {
+    width: 400px;
+    height: 350px;
+    top: -50px;
+    right: -80px;
+    background: rgba(153,195,59,0.12);
+    animation-delay: -4s;
+  }
+
+  .hero__grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(153,195,59,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(153,195,59,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent);
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    background: rgba(153,195,59,0.1);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: var(--space-xl);
+    animation: fadeUp 0.8s var(--ease) both;
+  }
+
+  .hero__badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero__title {
+    font-size: clamp(48px, 8vw, 88px);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -3px;
+    color: white;
+    margin-bottom: var(--space-lg);
+    animation: fadeUp 0.8s var(--ease) 0.15s both;
+  }
+
+  .hero__title-accent {
+    background: linear-gradient(135deg, var(--primary-light), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero__desc {
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    max-width: 50ch;
+    line-height: 1.7;
+    margin-bottom: var(--space-xl);
+    animation: fadeUp 0.8s var(--ease) 0.3s both;
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s var(--ease) 0.45s both;
+  }
+
+  /* ═══════════════════════════════════════════
+     SERVICES
+     ═══════════════════════════════════════════ */
+  .services {
+    padding: var(--space-3xl) 0;
+    background: var(--white);
+    position: relative;
+  }
+
+  .services::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 40% 60% at 10% 90%, rgba(29,111,111,0.06), transparent),
+      radial-gradient(ellipse 50% 50% at 90% 10%, rgba(153,195,59,0.04), transparent);
+    pointer-events: none;
+  }
+
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-2xl);
+    position: relative;
+  }
+
+  .card__icon {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border-radius: var(--radius-md);
+    background: rgba(29,111,111,0.08);
+    color: var(--primary);
+    margin-bottom: var(--space-lg);
+    transition: all 0.3s var(--ease);
+  }
+
+  .card__icon--accent {
+    background: rgba(153,195,59,0.12);
+    color: #6a8a20;
+  }
+
+  .card:hover .card__icon {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .card:hover .card__icon--accent {
+    background: var(--accent);
+    color: var(--dark);
+  }
+
+  .card__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.3px;
+  }
+
+  .card__text {
+    font-size: 15px;
+    color: var(--dark);
+    opacity: 0.65;
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .card__tags {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s var(--ease);
+  }
+
+  .tag:hover {
+    transform: translateY(-1px);
+  }
+
+  .tag--soft {
+    background: rgba(29,111,111,0.08);
+    color: var(--primary);
+  }
+
+  /* ═══════════════════════════════════════════
+     STATS
+     ═══════════════════════════════════════════ */
+  .stats {
+    position: relative;
+    padding: var(--space-2xl) 0;
+    background: var(--dark);
+    overflow: hidden;
+  }
+
+  .stats__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+  }
+
+  .stats__orb--1 {
+    width: 300px;
+    height: 250px;
+    bottom: -80px;
+    right: 10%;
+    background: rgba(29,111,111,0.3);
+  }
+
+  .stats__orb--2 {
+    width: 200px;
+    height: 200px;
+    top: -60px;
+    left: 20%;
+    background: rgba(153,195,59,0.1);
+  }
+
+  .stats__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2xl);
+    position: relative;
+  }
+
+  .stats__item {
+    text-align: center;
+  }
+
+  .stats__number {
+    display: block;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: white;
+    line-height: 1;
+  }
+
+  .stats__label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.4);
+    margin-top: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .stats__divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  /* ═══════════════════════════════════════════
+     PROCESS
+     ═══════════════════════════════════════════ */
+  .process {
+    padding: var(--space-3xl) 0;
+    background: var(--light);
+    position: relative;
+  }
+
+  .process::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 50% 50% at 80% 20%, rgba(29,111,111,0.05), transparent),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(153,195,59,0.03), transparent);
+    pointer-events: none;
+  }
+
+  .process__steps {
+    margin-top: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    max-width: 700px;
+    position: relative;
+  }
+
+  .process__step {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
+    background: white;
+    border: 1px solid rgba(212,207,196,0.5);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s var(--ease);
+  }
+
+  .process__step:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .process__number {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--primary);
+    opacity: 0.2;
+    line-height: 1;
+    flex-shrink: 0;
+    letter-spacing: -2px;
+  }
+
+  .process__content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: var(--dark);
+  }
+
+  .process__content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--dark);
+    opacity: 0.65;
+  }
+
+  /* ═══════════════════════════════════════════
+     PHILOSOPHY
+     ═══════════════════════════════════════════ */
+  .philosophy {
+    position: relative;
+    padding: var(--space-3xl) 0;
+    background: var(--darker);
+    overflow: hidden;
+  }
+
+  .philosophy__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+  }
+
+  .philosophy__orb--1 {
+    width: 400px;
+    height: 350px;
+    bottom: -100px;
+    left: -50px;
+    background: rgba(29,111,111,0.35);
+    animation: float 15s ease-in-out infinite;
+  }
+
+  .philosophy__orb--2 {
+    width: 300px;
+    height: 250px;
+    top: -80px;
+    right: -40px;
+    background: rgba(153,195,59,0.1);
+    animation: float 12s ease-in-out infinite reverse;
+  }
+
+  .philosophy__inner {
+    position: relative;
+    max-width: 800px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .philosophy__quote {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .philosophy__quote p {
+    font-size: clamp(24px, 3.5vw, 36px);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: white;
+    max-width: none;
+  }
+
+  .philosophy__quote cite {
+    display: block;
+    margin-top: var(--space-lg);
+    font-style: normal;
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 500;
+  }
+
+  .philosophy__values {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    text-align: left;
+  }
+
+  .philosophy__value {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s var(--ease);
+  }
+
+  .philosophy__value:hover {
+    background: rgba(255,255,255,0.08);
+    color: white;
+  }
+
+  .philosophy__value svg {
+    flex-shrink: 0;
+    color: var(--accent);
+  }
+
+  /* ═══════════════════════════════════════════
+     ABOUT
+     ═══════════════════════════════════════════ */
+  .about {
+    padding: var(--space-3xl) 0;
+    background: var(--white);
+    position: relative;
+  }
+
+  .about::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 50% 60% at 90% 90%, rgba(29,111,111,0.05), transparent);
+    pointer-events: none;
+  }
+
+  .about__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    scroll-snap-type: y proximity;
-    max-width: 1200px;
+    gap: var(--space-3xl);
+    align-items: center;
+    position: relative;
+  }
+
+  .about__desc {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--dark);
+    opacity: 0.7;
+    margin-bottom: var(--space-md);
+  }
+
+  .about__link {
+    margin-top: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .about__link-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--primary);
+    opacity: 0.6;
+  }
+
+  .about__visual {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .about__card {
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-lg);
+    transition: all 0.4s var(--ease);
+  }
+
+  .about__card:hover {
+    transform: translateX(8px);
+  }
+
+  .about__card--1 {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+  }
+
+  .about__card--2 {
+    background: var(--light);
+    border: 1px solid rgba(212,207,196,0.5);
+  }
+
+  .about__card--3 {
+    background: linear-gradient(135deg, var(--accent), #7aaa22);
+    color: var(--dark);
+  }
+
+  .about__card-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.6;
+    margin-bottom: var(--space-xs);
+  }
+
+  .about__card-value {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  /* ═══════════════════════════════════════════
+     CTA / KONTAKT
+     ═══════════════════════════════════════════ */
+  .cta {
+    position: relative;
+    padding: var(--space-3xl) 0;
+    background: var(--dark);
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .cta__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+  }
+
+  .cta__orb--1 {
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    left: 30%;
+    background: rgba(29,111,111,0.3);
+  }
+
+  .cta__orb--2 {
+    width: 300px;
+    height: 250px;
+    top: -100px;
+    right: 20%;
+    background: rgba(153,195,59,0.1);
+  }
+
+  .cta__inner {
+    position: relative;
+    max-width: 650px;
     margin-inline: auto;
   }
 
-  .tile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 50vh;
-    padding: var(--space-2xl) var(--space-3xl);
-    text-decoration: none;
-    color: var(--color-text);
-    background: var(--color-background);
-    border-bottom: 1px solid var(--color-border);
-    scroll-snap-align: start;
-    transition: background-color var(--transition-base);
-  }
-
-  .tile:nth-child(odd) {
-    border-right: 1px solid var(--color-border);
-  }
-
-  .tile--alt {
-    background: var(--color-background-alt);
-  }
-
-  .tile--dark {
-    background: var(--color-text);
-    color: var(--color-text-inverse);
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .tile--primary {
-    background: var(--color-primary);
-    color: #FFFFFF;
-    border-color: rgba(0, 0, 0, 0.08);
-  }
-
-  .tile--secondary {
-    background: var(--color-secondary);
-    color: var(--color-text);
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-
-  a.tile:hover {
-    background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-background));
-    color: var(--color-text);
-  }
-
-  a.tile.tile--alt:hover {
-    background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-background-alt));
-  }
-
-  .tile__icon {
-    width: 48px;
-    height: 48px;
+  .cta__title {
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 800;
+    color: white;
+    letter-spacing: -2px;
+    line-height: 1.05;
     margin-bottom: var(--space-lg);
-    opacity: 0.6;
-    transition: opacity var(--transition-fast);
   }
 
-  a.tile:hover .tile__icon {
-    opacity: 1;
-    color: var(--color-primary);
-  }
-
-  .tile__title {
-    font-family: var(--font-family-heading);
-    font-size: var(--font-size-3xl);
-    font-weight: 700;
-    line-height: var(--line-height-tight);
-    margin-bottom: var(--space-md);
-  }
-
-  .tile__text {
-    font-size: var(--font-size-md);
-    opacity: 0.75;
-    max-width: 40ch;
-  }
-
-  .tile__arrow {
-    margin-top: auto;
-    padding-top: var(--space-xl);
-    font-size: var(--font-size-2xl);
-    opacity: 0.4;
-    transition: transform var(--transition-fast), opacity var(--transition-fast);
-  }
-
-  a.tile:hover .tile__arrow {
-    transform: translateX(8px);
-    opacity: 1;
-    color: var(--color-primary);
-  }
-
-  .tile__quote {
-    font-family: var(--font-family-heading);
-    font-size: var(--font-size-xl);
+  .cta__desc {
+    font-size: 17px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.7;
+    max-width: 45ch;
+    margin-inline: auto;
     margin-bottom: var(--space-xl);
   }
 
-  .tile__quote p {
-    font-weight: 500;
+  .cta__contact {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
   }
 
-  .tile__quote cite {
-    display: block;
-    font-size: var(--font-size-sm);
-    font-style: normal;
-    opacity: 0.7;
-    margin-top: var(--space-sm);
+  .cta__contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
   }
 
-  .tile__list {
-    list-style: none;
-    padding: 0;
+  .cta__contact-item svg {
+    color: var(--accent);
+    flex-shrink: 0;
   }
 
-  .tile__list li {
-    padding: var(--space-xs) 0;
-    font-weight: 500;
+  .cta__contact-item a {
+    color: rgba(255,255,255,0.6);
+    transition: color 0.3s var(--ease);
   }
 
-  .tile__list li + li {
-    margin-top: 0;
-  }
-
-  .tile__dl {
-    margin-top: var(--space-xl);
-  }
-
-  .tile__dl dt {
-    font-weight: 700;
-    margin-top: var(--space-md);
-  }
-
-  .tile__dl dt:first-child {
-    margin-top: 0;
-  }
-
-  .tile__dl dd {
-    margin: 0;
-    opacity: 0.8;
-    font-size: var(--font-size-sm);
-  }
-
-  .tile--info {
-    justify-content: flex-start;
-    gap: 0;
-    font-size: var(--font-size-sm);
-  }
-
-  .tile__company {
-    font-family: var(--font-family-heading);
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    margin-bottom: var(--space-md);
-  }
-
-  .tile__address {
-    font-style: normal;
-    line-height: 1.8;
-  }
-
-  .tile__address a {
-    color: var(--color-text-inverse);
-    opacity: 0.8;
-    text-decoration: none;
-  }
-
-  .tile__address a:hover {
-    opacity: 1;
-    color: var(--color-primary);
+  .cta__contact-item a:hover {
+    color: white;
   }
 
   .email__protected {
@@ -325,69 +1070,157 @@ import { siteConfig } from '../config';
     direction: rtl;
   }
 
-  .tile__label {
-    font-weight: 600;
-    font-size: var(--font-size-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    opacity: 0.5;
-    margin-bottom: var(--space-xs);
+  /* ═══════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════ */
+  .footer {
+    padding: var(--space-xl) 0;
+    background: var(--darker);
+    border-top: 1px solid rgba(255,255,255,0.05);
   }
 
-  .tile__hours {
-    margin-top: var(--space-xl);
+  .footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
   }
 
-  .tile__hours p {
-    margin: 0;
-    line-height: 1.6;
+  .footer__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
   }
 
-  .tile__legal {
-    margin-top: var(--space-xl);
+  .footer__wordmark {
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.5);
   }
 
-  .tile__legal-links {
+  .footer__dot {
+    color: var(--accent);
+  }
+
+  .footer__links {
     display: flex;
     gap: var(--space-lg);
   }
 
-  .tile__legal-links a {
-    color: var(--color-text-inverse);
-    opacity: 0.7;
+  .footer__links a {
+    color: rgba(255,255,255,0.4);
+    font-size: 13px;
     text-decoration: none;
-    transition: opacity var(--transition-fast);
+    transition: color 0.3s var(--ease);
   }
 
-  .tile__legal-links a:hover {
-    opacity: 1;
-    color: var(--color-text-inverse);
+  .footer__links a:hover {
+    color: rgba(255,255,255,0.8);
   }
 
-  .tile__copyright {
-    margin-top: auto;
-    padding-top: var(--space-lg);
-    font-size: var(--font-size-xs);
-    opacity: 0.3;
+  .footer__copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.2);
   }
 
-  @media (max-width: 639px) {
-    .tiles {
+  /* ═══════════════════════════════════════════
+     RESPONSIVE
+     ═══════════════════════════════════════════ */
+  @media (max-width: 768px) {
+    .nav__links {
+      display: none;
+    }
+
+    .nav__toggle {
+      display: flex;
+    }
+
+    .nav__mobile.open {
+      display: flex;
+    }
+
+    .hero__title {
+      letter-spacing: -2px;
+    }
+
+    .services__grid {
       grid-template-columns: 1fr;
     }
 
-    .tile {
-      min-height: 45vh;
-      padding: var(--space-xl) var(--space-lg);
-      border-right: none;
+    .stats__grid {
+      flex-direction: column;
+      gap: var(--space-xl);
     }
 
-    .tile:nth-child(odd) {
-      border-right: none;
+    .stats__divider {
+      width: 60px;
+      height: 1px;
     }
 
-    .tile__title {
-      font-size: var(--font-size-2xl);
+    .philosophy__values {
+      grid-template-columns: 1fr;
+    }
+
+    .about__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .cta__contact {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer__inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero__actions .btn {
+      width: 100%;
+      justify-content: center;
     }
   }
 </style>
+
+<script>
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      nav?.classList.toggle('scrolled', !entry.isIntersecting);
+    },
+    { threshold: 0.9 }
+  );
+  const hero = document.querySelector('.hero');
+  if (hero) observer.observe(hero);
+
+  // Mobile menu toggle
+  const toggle = document.querySelector('.nav__toggle');
+  const mobile = document.querySelector('.nav__mobile');
+  toggle?.addEventListener('click', () => {
+    const isOpen = mobile?.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    mobile?.setAttribute('aria-hidden', String(!isOpen));
+  });
+
+  // Close mobile menu on link click
+  mobile?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobile?.classList.remove('open');
+      toggle?.setAttribute('aria-expanded', 'false');
+      mobile?.setAttribute('aria-hidden', 'true');
+    });
+  });
+
+  // Email obfuscation
+  document.querySelectorAll('.email').forEach(el => {
+    const name = el.getAttribute('data-name');
+    const domain = el.getAttribute('data-domain');
+    if (name && domain) {
+      el.setAttribute('href', `mailto:${name}@${domain}`);
+    }
+  });
+</script>
