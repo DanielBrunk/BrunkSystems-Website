@@ -69,7 +69,7 @@ import { siteConfig } from '../config';
        ═══════════════════════════════════════════ -->
   <section class="services" id="bereiche">
     <div class="container">
-      <div class="fade-up">
+      <div>
         <p class="section-label">Bereiche</p>
         <h2 class="section-title">Vier Wege.<br />Ein Thema: KI.</h2>
         <p class="section-desc">
@@ -153,15 +153,15 @@ import { siteConfig } from '../config';
     <div class="container">
       <div class="stats__grid fade-up">
         <div class="stats__item">
-          <span class="stats__number">Verstehen.</span>
+          <span class="stats__number">Verstehen</span>
         </div>
         <div class="stats__divider"></div>
         <div class="stats__item">
-          <span class="stats__number">Umsetzen.</span>
+          <span class="stats__number">Umsetzen</span>
         </div>
         <div class="stats__divider"></div>
         <div class="stats__item">
-          <span class="stats__number">Profitieren.</span>
+          <span class="stats__number">Profitieren</span>
         </div>
       </div>
     </div>
@@ -172,7 +172,7 @@ import { siteConfig } from '../config';
        ═══════════════════════════════════════════ -->
   <section class="process" id="prozess">
     <div class="container">
-      <div class="fade-up">
+      <div>
         <p class="section-label">Wie wir arbeiten</p>
         <h2 class="section-title">Vom Problem<br />zur Lösung.</h2>
       </div>
@@ -264,20 +264,6 @@ import { siteConfig } from '../config';
             </a>
           </div>
         </div>
-        <div class="about__visual fade-up">
-          <div class="about__card about__card--1">
-            <span class="about__card-label">Standort</span>
-            <span class="about__card-value">Bodensee</span>
-          </div>
-          <div class="about__card about__card--2">
-            <span class="about__card-label">Hintergrund</span>
-            <span class="about__card-value">GaLaBau + Tech</span>
-          </div>
-          <div class="about__card about__card--3">
-            <span class="about__card-label">Philosophie</span>
-            <span class="about__card-value">Problem first</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -290,7 +276,7 @@ import { siteConfig } from '../config';
     <div class="cta__orb cta__orb--2"></div>
     <div class="container">
       <div class="cta__inner fade-up">
-        <p class="section-label" style="color: var(--accent); text-align: center;">Kontakt</p>
+        <p class="section-label cta__label">Kontakt</p>
         <h2 class="cta__title">Lassen Sie uns über<br />Ihr Projekt sprechen.</h2>
         <p class="cta__desc">
           Kein Verkaufsgespräch. Kein Kleingedrucktes. Einfach ein Gespräch darüber,
@@ -892,16 +878,16 @@ import { siteConfig } from '../config';
     gap: var(--space-md);
     padding: var(--space-md) var(--space-lg);
     border-radius: var(--radius-md);
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.06);
-    color: rgba(255,255,255,0.7);
-    font-size: 14px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
     font-weight: 500;
     transition: all 0.3s var(--ease);
   }
 
   .philosophy__value:hover {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.12);
     color: white;
   }
 
@@ -929,10 +915,7 @@ import { siteConfig } from '../config';
   }
 
   .about__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3xl);
-    align-items: center;
+    max-width: 700px;
     position: relative;
   }
 
@@ -1044,6 +1027,13 @@ import { siteConfig } from '../config';
     position: relative;
     max-width: 650px;
     margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta__label {
+    color: var(--accent);
   }
 
   .cta__title {

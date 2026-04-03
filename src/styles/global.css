@@ -315,14 +315,6 @@ body::after {
   50% { transform: translateY(-5px); }
 }
 
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.fade-up.visible {
-  animation: fadeUp 0.8s var(--ease) forwards;
-}
 
 /* ============================================
    RESPONSIVE
