@@ -21,6 +21,9 @@ const { title, description, image, noindex } = Astro.props;
     <SEO title={title} description={description} image={image} noindex={noindex} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#1a2e26" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="preload" href="/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin />
 
     {siteConfig.umamiWebsiteId && siteConfig.umamiScriptUrl && (
