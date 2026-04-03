@@ -139,28 +139,23 @@ const { title, description, image, noindex } = Astro.props;
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: var(--space-md) env(safe-area-inset-right, 0px) var(--space-md) env(safe-area-inset-left, 0px);
-    margin-top: env(safe-area-inset-top, 0px);
-    transition: all 0.4s var(--ease);
+    padding-top: env(safe-area-inset-top, 0px);
     background: var(--darker);
-    transform: translateZ(0);
   }
 
-  .nav::before {
-    content: '';
-    position: absolute;
-    top: calc(-1 * env(safe-area-inset-top, 0px));
-    left: 0;
-    right: 0;
-    height: env(safe-area-inset-top, 0px);
-    background: inherit;
+  .nav__inner {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+    transition: padding 0.3s var(--ease);
   }
 
   .nav.scrolled {
-    background: rgba(26, 46, 38, 1);
-    backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255,255,255,0.06);
-    padding: var(--space-sm) env(safe-area-inset-right, 0px) var(--space-sm) env(safe-area-inset-left, 0px);
+  }
+
+  .nav.scrolled .nav__inner {
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
   }
 
   .nav__inner {
