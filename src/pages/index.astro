@@ -10,8 +10,11 @@ import { siteConfig } from '../config';
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="/" class="nav__logo" aria-label="BrunkSystems Startseite">
-        <img src="/images/logo-icon.svg" alt="" width="32" height="32" />
-        <span class="nav__wordmark">BRUNK<span class="nav__dot">.</span>SYSTEMS</span>
+        <span class="logo-h logo-h--sm">
+          <span class="logo-brunk">BRUNK</span>
+          <span class="logo-line"></span>
+          <span class="logo-sys">SYSTEMS</span>
+        </span>
       </a>
       <div class="nav__links">
         <a href="#bereiche">Bereiche</a>
@@ -75,7 +78,7 @@ import { siteConfig } from '../config';
       </div>
 
       <div class="services__grid">
-        <div class="card fade-up" style="animation-delay: 0.1s">
+        <div class="card fade-up">
           <div class="card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a8 8 0 0 0-8 8c0 3.4 2.1 6.3 5 7.4V20a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.6c2.9-1.1 5-4 5-7.4a8 8 0 0 0-8-8z" />
@@ -90,7 +93,7 @@ import { siteConfig } from '../config';
           </div>
         </div>
 
-        <div class="card fade-up" style="animation-delay: 0.2s">
+        <div class="card fade-up">
           <div class="card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
@@ -105,7 +108,7 @@ import { siteConfig } from '../config';
           </div>
         </div>
 
-        <div class="card fade-up" style="animation-delay: 0.3s">
+        <div class="card fade-up">
           <div class="card__icon card__icon--accent">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10" />
@@ -120,7 +123,7 @@ import { siteConfig } from '../config';
           </div>
         </div>
 
-        <div class="card fade-up" style="animation-delay: 0.4s">
+        <div class="card fade-up">
           <div class="card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <rect width="18" height="10" x="3" y="11" rx="2" />
@@ -150,18 +153,15 @@ import { siteConfig } from '../config';
     <div class="container">
       <div class="stats__grid fade-up">
         <div class="stats__item">
-          <span class="stats__number">4</span>
-          <span class="stats__label">Leistungsbereiche</span>
+          <span class="stats__number">Verstehen.</span>
         </div>
         <div class="stats__divider"></div>
         <div class="stats__item">
-          <span class="stats__number">100%</span>
-          <span class="stats__label">Individuelle Lösungen</span>
+          <span class="stats__number">Umsetzen.</span>
         </div>
         <div class="stats__divider"></div>
         <div class="stats__item">
-          <span class="stats__number">Bodensee</span>
-          <span class="stats__label">Region & Remote</span>
+          <span class="stats__number">Profitieren.</span>
         </div>
       </div>
     </div>
@@ -178,7 +178,7 @@ import { siteConfig } from '../config';
       </div>
 
       <div class="process__steps">
-        <div class="process__step fade-up" style="animation-delay: 0.1s">
+        <div class="process__step fade-up">
           <div class="process__number">01</div>
           <div class="process__content">
             <h3>Zuhören & Einordnen</h3>
@@ -186,7 +186,7 @@ import { siteConfig } from '../config';
           </div>
         </div>
 
-        <div class="process__step fade-up" style="animation-delay: 0.2s">
+        <div class="process__step fade-up">
           <div class="process__number">02</div>
           <div class="process__content">
             <h3>Mindset & Strategie</h3>
@@ -194,7 +194,7 @@ import { siteConfig } from '../config';
           </div>
         </div>
 
-        <div class="process__step fade-up" style="animation-delay: 0.3s">
+        <div class="process__step fade-up">
           <div class="process__number">03</div>
           <div class="process__content">
             <h3>Umsetzen & Befähigen</h3>
@@ -214,7 +214,7 @@ import { siteConfig } from '../config';
     <div class="container">
       <div class="philosophy__inner fade-up">
         <blockquote class="philosophy__quote">
-          <p>&bdquo;KI ist nicht die Antwort auf alles. Aber wer sie versteht, stellt bessere Fragen.&ldquo;</p>
+          <p>&bdquo;KI beginnt nicht im Code. KI beginnt im Kopf.&ldquo;</p>
           <cite>Daniel Brunk, BrunkSystems</cite>
         </blockquote>
         <div class="philosophy__values">
@@ -249,7 +249,7 @@ import { siteConfig } from '../config';
           <p class="section-label">Über uns</p>
           <h2 class="section-title">Gärtnermeister<br />trifft Entwickler.</h2>
           <p class="about__desc">
-            BrunkSystems ist die Digitalsparte von Daniel Brunk — Gärtnermeister und
+            BrunkSystems ist ein Unternehmen von Daniel Brunk — Gärtnermeister und
             Entwickler am Bodensee. Was als interne Digitalisierung im eigenen
             GaLaBau-Betrieb begann, ist heute Dienstleistung für andere Unternehmen.
           </p>
@@ -264,7 +264,7 @@ import { siteConfig } from '../config';
             </a>
           </div>
         </div>
-        <div class="about__visual fade-up" style="animation-delay: 0.2s">
+        <div class="about__visual fade-up">
           <div class="about__card about__card--1">
             <span class="about__card-label">Standort</span>
             <span class="about__card-value">Bodensee</span>
@@ -322,8 +322,13 @@ import { siteConfig } from '../config';
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <img src="/images/logo-icon.svg" alt="" width="28" height="28" />
-          <span class="footer__wordmark">BRUNK<span class="footer__dot">.</span>SYSTEMS</span>
+          <span class="logo-k">
+            <span class="logo-k__bar"></span>
+            <span class="logo-k__text">
+              <span class="logo-brunk logo-brunk--footer">BRUNK</span>
+              <span class="logo-sys logo-sys--footer">SYSTEMS</span>
+            </span>
+          </span>
         </div>
         <div class="footer__links">
           <a href="/impressum">Impressum</a>
@@ -373,14 +378,42 @@ import { siteConfig } from '../config';
     color: white;
   }
 
-  .nav__wordmark {
-    font-weight: 800;
-    font-size: 14px;
-    letter-spacing: 3px;
+  /* Logo horizontal (Nav) */
+  .logo-h {
+    display: flex;
+    align-items: stretch;
   }
 
-  .nav__dot {
-    color: var(--accent);
+  .logo-h--sm {
+    height: 24px;
+  }
+
+  .logo-brunk {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--light);
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+  }
+
+  .logo-line {
+    width: 2px;
+    background: var(--accent);
+    margin: 0 10px;
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+
+  .logo-sys {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--light);
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
   }
 
   .nav__links {
@@ -456,7 +489,7 @@ import { siteConfig } from '../config';
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    animation: float 12s ease-in-out infinite;
+    animation: float 20s ease-in-out infinite;
   }
 
   .hero__orb--1 {
@@ -805,7 +838,7 @@ import { siteConfig } from '../config';
     bottom: -100px;
     left: -50px;
     background: rgba(29,111,111,0.35);
-    animation: float 15s ease-in-out infinite;
+    animation: float 24s ease-in-out infinite;
   }
 
   .philosophy__orb--2 {
@@ -814,7 +847,7 @@ import { siteConfig } from '../config';
     top: -80px;
     right: -40px;
     background: rgba(153,195,59,0.1);
-    animation: float 12s ease-in-out infinite reverse;
+    animation: float 22s ease-in-out infinite reverse;
   }
 
   .philosophy__inner {
@@ -1089,15 +1122,40 @@ import { siteConfig } from '../config';
     gap: var(--space-sm);
   }
 
-  .footer__wordmark {
-    font-weight: 800;
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: rgba(255,255,255,0.5);
+  /* Logo kompakt (Footer) */
+  .logo-k {
+    display: flex;
+    align-items: stretch;
   }
 
-  .footer__dot {
-    color: var(--accent);
+  .logo-k__bar {
+    width: 2px;
+    background: var(--accent);
+    border-radius: 1px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+
+  .logo-k__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo-brunk--footer {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1;
+  }
+
+  .logo-sys--footer {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-top: 1px;
   }
 
   .footer__links {
