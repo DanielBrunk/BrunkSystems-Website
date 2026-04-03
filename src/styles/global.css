@@ -78,7 +78,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--dark);
-  background-color: var(--white);
+  background-color: var(--darker);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

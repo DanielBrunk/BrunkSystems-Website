@@ -17,7 +17,7 @@ const { title, description, image, noindex } = Astro.props;
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <SEO title={title} description={description} image={image} noindex={noindex} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -137,6 +137,7 @@ const { title, description, image, noindex } = Astro.props;
     right: 0;
     z-index: 1000;
     padding: var(--space-md) 0;
+    padding-top: calc(var(--space-md) + env(safe-area-inset-top, 0px));
     transition: all 0.4s var(--ease);
   }
 
@@ -145,6 +146,7 @@ const { title, description, image, noindex } = Astro.props;
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255,255,255,0.06);
     padding: var(--space-sm) 0;
+    padding-top: calc(var(--space-sm) + env(safe-area-inset-top, 0px));
   }
 
   .nav__inner {
