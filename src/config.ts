@@ -10,8 +10,8 @@ export const siteConfig = {
   email: 'info@brunksystems.de',
   address: {
     street: 'Musterstraße 1',
-    zip: '78315',
-    city: 'Radolfzell',
+    zip: '78239',
+    city: 'Rielasingen-Worblingen',
   },
 
   // Öffnungszeiten
