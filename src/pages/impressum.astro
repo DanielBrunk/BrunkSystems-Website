@@ -8,7 +8,7 @@ import { siteConfig } from '../config';
     <div class="container">
       <h1>Impressum</h1>
 
-      <h3>Angaben gemäß § 5 TMG</h3>
+      <h2>Angaben gemäß § 5 TMG</h2>
       <p>
         {siteConfig.companyName}<br />
         {siteConfig.owner}<br />
@@ -16,19 +16,19 @@ import { siteConfig } from '../config';
         {siteConfig.address.zip} {siteConfig.address.city}
       </p>
 
-      <h3>Kontakt</h3>
+      <h2>Kontakt</h2>
       <p>
         Telefon: <a href={`tel:${siteConfig.phone}`}>{siteConfig.phoneDisplay}</a><br />
         E-Mail: <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
       </p>
 
-      <h3>Umsatzsteuer-ID</h3>
+      <h2>Umsatzsteuer-ID</h2>
       <p>
         Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
         {siteConfig.legal.taxId || 'wird nachgetragen'}
       </p>
 
-      <h3>Streitschlichtung</h3>
+      <h2>Streitschlichtung</h2>
       <p>
         Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
         <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">
@@ -40,7 +40,7 @@ import { siteConfig } from '../config';
         Verbraucherschlichtungsstelle teilzunehmen.
       </p>
 
-      <h3>Haftung für Inhalte</h3>
+      <h2>Haftung für Inhalte</h2>
       <p>
         Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten
         nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
@@ -49,7 +49,7 @@ import { siteConfig } from '../config';
         Tätigkeit hinweisen.
       </p>
 
-      <h3>Haftung für Links</h3>
+      <h2>Haftung für Links</h2>
       <p>
         Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
         Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
@@ -71,13 +71,13 @@ import { siteConfig } from '../config';
     margin-bottom: var(--space-2xl);
   }
 
-  .legal-page h3 {
+  .legal-page h2 {
     margin-top: var(--space-xl);
     margin-bottom: var(--space-sm);
     font-size: 20px;
   }
 
-  .legal-page h3:first-of-type {
+  .legal-page h2:first-of-type {
     margin-top: 0;
   }
 

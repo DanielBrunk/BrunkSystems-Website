@@ -27,10 +27,10 @@ export const siteConfig = {
   umamiScriptUrl: 'https://analytics.brunksys.de/script.js',
 
   // SEO Defaults
-  defaultTitle: 'BrunkSystems – IT & Digitale Lösungen am Bodensee',
+  defaultTitle: 'BrunkSystems - IT & Digitale Lösungen am Bodensee',
   defaultDescription:
-    'KI-Beratung, Vorträge und KI-Systeme aus Rielasingen-Worblingen am Bodensee. KI verstehen, einsetzen und davon profitieren.',
-  defaultImage: '/images/og-image.jpg',
+    'KI-Beratung, Vorträge und KI-Systeme aus Rielasingen-Worblingen am Bodensee. KI verstehen, einsetzen und davon profitieren - für KMU und Entscheider.',
+  defaultImage: '/images/og-image.png',
 
   // Rechtliches
   legal: {

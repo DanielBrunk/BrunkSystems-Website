@@ -32,6 +32,7 @@ const { title, description, image, noindex } = Astro.props;
   </head>
   <body>
     <!-- NAV -->
+    <header>
     <nav class="nav" id="nav">
       <div class="nav__inner">
         <a href="/" class="nav__logo" aria-label="BrunkSystems Startseite">
@@ -60,6 +61,7 @@ const { title, description, image, noindex } = Astro.props;
         <a href="/#kontakt">Kontakt</a>
       </div>
     </nav>
+    </header>
 
     <main>
       <slot />

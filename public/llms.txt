@@ -1,0 +1,19 @@
+# BrunkSystems
+
+> KI-Beratung, Vorträge und KI-Systeme aus Rielasingen-Worblingen am Bodensee. KI verstehen, einsetzen und davon profitieren.
+
+BrunkSystems ist ein IT-Unternehmen von Daniel Brunk mit Sitz in Rielasingen-Worblingen am Bodensee. Schwerpunkt: Künstliche Intelligenz für kleine und mittlere Unternehmen.
+
+## Leistungen
+
+- **KI-Beratung:** Persönliche Beratung für Unternehmen und Einzelpersonen. Wo macht KI Sinn? Wo nicht?
+- **Vorträge:** KI greifbar machen - für Teams, Events und Konferenzen. Kein Hype, sondern Substanz.
+- **KI-Mindset:** Unser Ansatz, wie KI in Unternehmen wirklich ankommt. Nicht die Technik entscheidet - sondern die Denkweise.
+- **KI-Systeme:** Individuelle Systeme mit KI als Kern. Von Grund auf neu gedacht und gebaut.
+
+## Kontakt
+
+- Website: https://brunk-systems.de
+- E-Mail: office@brunksystems.de
+- Telefon: +4917699378390
+- Adresse: Gottlieb-Daimlerstraße 10, 78239 Rielasingen-Worblingen

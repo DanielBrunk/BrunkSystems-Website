@@ -14,16 +14,54 @@ const {
   title = siteConfig.defaultTitle,
   description = siteConfig.defaultDescription,
   image = siteConfig.defaultImage,
-  canonicalUrl = Astro.url.href,
+  canonicalUrl = new URL(Astro.url.pathname, siteConfig.siteUrl).href,
   type = 'website',
   noindex = false,
 } = Astro.props;
 
 const fullImageUrl = new URL(image, siteConfig.siteUrl).href;
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": siteConfig.companyName,
+  "url": siteConfig.siteUrl,
+  "logo": `${siteConfig.siteUrl}/images/logo-primary.svg`,
+  "description": siteConfig.defaultDescription,
+  "founder": {
+    "@type": "Person",
+    "name": siteConfig.owner,
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": siteConfig.address.street,
+    "postalCode": siteConfig.address.zip,
+    "addressLocality": siteConfig.address.city,
+    "addressCountry": "DE",
+  },
+  "telephone": siteConfig.phone,
+  "email": siteConfig.email,
+  "vatID": siteConfig.legal.taxId,
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": siteConfig.phone,
+    "email": siteConfig.email,
+    "contactType": "customer service",
+    "availableLanguage": "German",
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteConfig.companyName,
+  "url": siteConfig.siteUrl,
+};
 ---
 
 <title>{title}</title>
 <meta name="description" content={description} />
+<meta name="author" content={siteConfig.owner} />
 <link rel="canonical" href={canonicalUrl} />
 {noindex && <meta name="robots" content="noindex, nofollow" />}
 
@@ -41,3 +79,7 @@ const fullImageUrl = new URL(image, siteConfig.siteUrl).href;
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={fullImageUrl} />
+
+<!-- JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
