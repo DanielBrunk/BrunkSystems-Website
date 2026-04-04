@@ -7,7 +7,7 @@ export const siteConfig = {
   // Kontakt
   phone: '+4917699378390',
   phoneDisplay: '0176 99378390',
-  email: 'info@brunksystems.de',
+  email: 'office@brunksystems.de',
   address: {
     street: 'Gottlieb-Daimlerstraße 10',
     zip: '78239',
