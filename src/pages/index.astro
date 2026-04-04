@@ -287,7 +287,6 @@ import { siteConfig } from '../config';
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    animation: float 20s ease-in-out infinite;
   }
 
   .hero__orb--1 {
@@ -304,7 +303,6 @@ import { siteConfig } from '../config';
     top: -50px;
     right: -80px;
     background: rgba(153,195,59,0.12);
-    animation-delay: -4s;
   }
 
   .hero__grid-pattern {
@@ -335,7 +333,6 @@ import { siteConfig } from '../config';
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: var(--space-xl);
-    animation: fadeUp 0.8s var(--ease) both;
   }
 
   .hero__badge-dot {
@@ -343,12 +340,6 @@ import { siteConfig } from '../config';
     height: 8px;
     border-radius: 50%;
     background: var(--accent);
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.8); }
   }
 
   .hero__title {
@@ -358,7 +349,6 @@ import { siteConfig } from '../config';
     letter-spacing: -3px;
     color: white;
     margin-bottom: var(--space-lg);
-    animation: fadeUp 0.8s var(--ease) 0.15s both;
   }
 
   .hero__title-accent {
@@ -374,14 +364,12 @@ import { siteConfig } from '../config';
     max-width: 50ch;
     line-height: 1.7;
     margin-bottom: var(--space-xl);
-    animation: fadeUp 0.8s var(--ease) 0.3s both;
   }
 
   .hero__actions {
     display: flex;
     gap: var(--space-md);
     flex-wrap: wrap;
-    animation: fadeUp 0.8s var(--ease) 0.45s both;
   }
 
   /* ═══════════════════════════════════════════
